@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Fri Apr 15 14:23:12 PDT 2016
+#Fri Apr 15 15:51:58 CDT 2016
 class.QuestionScreen.superclass=greenfoot.Actor
 mainWindow.width=850
 class.MyWorld.image=board.gif
@@ -7,13 +7,13 @@ class.MyWorld.superclass=greenfoot.World
 project.charset=UTF-8
 version=2.8.0
 class.Button.superclass=greenfoot.Actor
-class.ResultScreen.superclass=greenfoot.Actor
 class.ExplanationText.superclass=greenfoot.Actor
+class.ResultScreen.superclass=greenfoot.Actor
 world.lastInstantiated=MyWorld
-mainWindow.y=40
 class.ResultScreen.image=blueButton.png
+mainWindow.y=40
 mainWindow.x=40
-class.TextField.superclass=greenfoot.Actor
 class.Button.image=blueButtonedited.png
-mainWindow.height=600
+class.TextField.superclass=greenfoot.Actor
 class.QuestionScreen.image=blueButton.png
+mainWindow.height=600
