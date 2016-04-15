@@ -27,7 +27,7 @@ public class MyWorld extends World
         addObject(new Button(), 256, 198);
         addObject(new Button(), 349, 198);
         addObject(new Button(), 443, 198);
-       
+       addObject(new Score("Score: "),230,446); //Score counter
         
     }
 }
