@@ -32,7 +32,7 @@ public class TextField extends Actor
         }
         if(mouse.getActor() == this)
         {
-            System.out.println("Enetered");
+            System.out.println("Entered");
             
             g = new GreenfootImage(ans, 30, Color.RED , null);
             setImage(g);
@@ -48,6 +48,7 @@ public class TextField extends Actor
             
             getWorld().addObject(new ResultScreen(),100,100);
             getWorld().addObject(new ExplanationText("Correct Answer"),100,100);
+            getWorld().addObject(new Score("Score: "),500,430);
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
             getWorld().removeObject(this);
             
