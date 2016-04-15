@@ -11,10 +11,8 @@ import java.awt.event.*;
 public class Score extends Actor
 {
     // instance variables - replace the example below with your own
-    int x=0;
-    /**
-     * Constructor for objects of class Player
-     */
+    int points=0;
+
     public Score(String text)
     {
          GreenfootImage g = new GreenfootImage(text, 18, Color.WHITE , null);
@@ -22,7 +20,7 @@ public class Score extends Actor
     }
     public void act()
     {
-              //observer      
+              //observer pattern to be added      
             if(Greenfoot.mouseClicked(this)){
         getWorld().removeObject(this);
         
