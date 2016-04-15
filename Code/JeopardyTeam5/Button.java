@@ -18,7 +18,11 @@ public class Button extends Actor
         
         if(Greenfoot.mouseClicked(this)){
            getWorld().addObject(new QuestionScreen(),100,100);
-           getWorld().addObject(new TextField("answer"),100,100);
+            getWorld().addObject(new TextField("Question"),100,100);
+            getWorld().addObject(new TextField("a. True"),100,200);
+            getWorld().addObject(new TextField("b. False"),100,300);
+            
+            getWorld().removeObject(this);
         }
     }    
 }

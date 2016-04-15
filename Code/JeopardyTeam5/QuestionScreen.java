@@ -16,6 +16,7 @@ public class QuestionScreen extends Actor
     {
   
         if(Greenfoot.mouseClicked(this)){
+            getWorld().removeObjects(getWorld().getObjects(TextField.class));
            getWorld().removeObject(this);
         }
     }    
