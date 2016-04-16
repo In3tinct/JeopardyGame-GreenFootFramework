@@ -16,6 +16,7 @@ public class TextField extends Actor
     public TextField(String text) {
         ans = text;
         g = new GreenfootImage(text, 30, Color.YELLOW , null);
+        g.scale(100,100);
         setImage(g);
         
     }
@@ -32,8 +33,6 @@ public class TextField extends Actor
         }
         if(mouse.getActor() == this)
         {
-            System.out.println("Entered");
-            
             g = new GreenfootImage(ans, 30, Color.RED , null);
             setImage(g);
         }
@@ -48,13 +47,12 @@ public class TextField extends Actor
             
             getWorld().addObject(new ResultScreen(),100,100);
             getWorld().addObject(new ExplanationText("Correct Answer"),100,100);
-            getWorld().addObject(new Score("Score: "),500,430);
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
-            getWorld().removeObject(this);
+            getWorld().removeObjects(getWorld().getObjects(Question.class));
+            getWorld().removeObjects(getWorld().getObjects(TextField.class));
+
             
         }
     }
     
 }
-
-
