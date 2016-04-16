@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.Color;
 /**
  * Write a description of class Button here.
  * 
@@ -8,7 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Button extends Actor
 {
-    
+    public Button(String text){
+        GreenfootImage g = new GreenfootImage(text, 30, Color.YELLOW , null);
+        setImage(g);   
+    }
     /**
      * Act - do whatever the Button wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,9 +21,11 @@ public class Button extends Actor
         
         if(Greenfoot.mouseClicked(this)){
            getWorld().addObject(new QuestionScreen(),100,100);
-            getWorld().addObject(new TextField("Question"),100,100);
-            getWorld().addObject(new TextField("a. True"),100,200);
-            getWorld().addObject(new TextField("b. False"),100,300);
+            getWorld().addObject(new Question("Barack Obama is president of which country?"),305,60);
+            getWorld().addObject(new TextField("a. India"),100,180);
+            getWorld().addObject(new TextField("b. United States"),149,216);
+            getWorld().addObject(new TextField("c. Europe"),114,256);
+            getWorld().addObject(new TextField("d. Australia"),123,296);
             
             getWorld().removeObject(this);
         }
