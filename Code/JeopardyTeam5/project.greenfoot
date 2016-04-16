@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Apr 16 00:58:38 CDT 2016
+#Sat Apr 16 01:13:27 CDT 2016
 editor.fx.0.height=700
 target2.width=140
 target8.name=Question
@@ -51,12 +51,12 @@ class.QuestionCardLeaf.superclass=greenfoot.Actor
 mainWindow.width=1942
 readme.width=47
 target9.name=ResultScreen
-class.MainClass.image=sparta.jpg
 target5.height=50
 target10.name=MyWorld
 dependency13.type=UsesDependency
 target2.type=ClassTarget
 dependency1.to=QuestionScreen
+class.MainScreen.image=sparta.jpg
 dependency3.type=UsesDependency
 target2.height=50
 target2.typeParameters=
@@ -80,6 +80,7 @@ editor.swing.0.x=-11
 target5.showInterface=false
 dependency5.from=TextField
 target8.showInterface=false
+class.MainScreen.superclass=greenfoot.Actor
 target7.typeParameters=
 target2.name=QuestionCardLeaf
 dependency9.from=MyWorld
@@ -94,8 +95,8 @@ target11.showInterface=false
 target10.y=130
 target10.x=190
 dependency2.to=Question
+class.ButtonForMainScreen.image=bluebuttonsmall.png
 target11.name=ExplanationText
-class.MyWorld.image=board.gif
 dependency14.type=UsesDependency
 target9.y=190
 target9.x=10
@@ -111,7 +112,6 @@ target5.x=160
 dependency4.type=UsesDependency
 target7.type=ClassTarget
 target10.width=80
-class.MainClass.superclass=greenfoot.Actor
 target3.y=310
 target3.x=10
 target11.width=120
