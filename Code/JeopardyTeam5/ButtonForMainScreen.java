@@ -15,9 +15,9 @@ public class ButtonForMainScreen extends Actor
     public void act() 
     {
             if(Greenfoot.mouseClicked(this)){
-            getWorld().addObject(new GameScreen(),300,225);
+            //getWorld().addObject(new GameScreen(),300,225);
             //Removing the first screen object
-            getWorld().removeObjects(getWorld().getObjects(MainScreen.class));
+            //getWorld().removeObjects(getWorld().getObjects(MainScreen.class));
         }
         // Add your action code here.
     }    
