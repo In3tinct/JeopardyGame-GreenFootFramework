@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Apr 16 01:13:27 CDT 2016
+#Sat Apr 16 20:32:09 CDT 2016
 editor.fx.0.height=700
 target2.width=140
 target8.name=Question
@@ -80,8 +80,8 @@ editor.swing.0.x=-11
 target5.showInterface=false
 dependency5.from=TextField
 target8.showInterface=false
-class.MainScreen.superclass=greenfoot.Actor
 target7.typeParameters=
+class.MainScreen.superclass=greenfoot.Actor
 target2.name=QuestionCardLeaf
 dependency9.from=MyWorld
 readme.name=@README
@@ -126,8 +126,8 @@ dependency2.from=Button
 dependency6.from=TextField
 project.charset=UTF-8
 target3.showInterface=false
-class.GameScreen.image=board.gif
 target3.name=TextFieldForMainScreen
+class.GameScreen.image=board.gif
 target6.showInterface=false
 target3.typeParameters=
 target9.showInterface=false
