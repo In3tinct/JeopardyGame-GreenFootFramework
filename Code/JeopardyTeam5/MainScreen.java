@@ -20,10 +20,10 @@ public class MainScreen extends Actor
             
             getWorld().removeObjects(getWorld().getObjects(TextFieldForMainScreen.class));
             getWorld().addObject(new TextFieldForMainScreen("Please select category to proceed",Color.BLACK),300,70);
-            getWorld().addObject(new ButtonForMainScreen(),100,130);
-            getWorld().addObject(new ButtonForMainScreen(),500,130);
-            getWorld().addObject(new ButtonForMainScreen(),100,400);
-            getWorld().addObject(new ButtonForMainScreen(),500,400);
+            getWorld().addObject(new MainTopicComposite(),100,130);
+            getWorld().addObject(new MainTopicComposite(),500,130);
+            getWorld().addObject(new MainTopicComposite(),100,400);
+            getWorld().addObject(new MainTopicComposite(),500,400);
         }
     }    
 }
