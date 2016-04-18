@@ -7,7 +7,7 @@ interface ICardComponent
     public void addQCard(ICardComponent ques);
     public void removeQCard(ICardComponent ques);
     public void displayQCard();
-    public void getQCard(int pos);
+    public ICardComponent getQCard(int pos);
 };
 /**
  * Write a description of class Button here.
@@ -37,9 +37,11 @@ public class QuestionCardLeaf extends Actor implements ICardComponent
     public void addQCard(ICardComponent ques)
     {
     }
+    
     public void removeQCard(ICardComponent ques)
     {
     }
+    
     public void displayQCard()
     {
             getWorld().addObject(new QuestionScreen(),100,100);
@@ -51,7 +53,9 @@ public class QuestionCardLeaf extends Actor implements ICardComponent
             
             getWorld().removeObject(this);
     }
-    public void getQCard(int pos)
+    
+    public ICardComponent getQCard(int pos)
     {
+        return null;
     }
 }
