@@ -44,14 +44,7 @@ public class TextField extends Actor
         
         
         if(Greenfoot.mouseClicked(this)){
-            
-            getWorld().addObject(new ResultScreen(),100,100);
-            getWorld().addObject(new ExplanationText("Correct Answer"),100,100);
-            getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
-            getWorld().removeObjects(getWorld().getObjects(Question.class));
-            getWorld().removeObjects(getWorld().getObjects(TextField.class));
-
-            
+            getWorld().addObject(new ExplanationText("Correct Answer"),100,400);
         }
     }
     

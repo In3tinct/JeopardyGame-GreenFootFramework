@@ -10,7 +10,7 @@ public class ExplanationText extends Actor
 {
        public ExplanationText(String text) {
       
-       GreenfootImage g = new GreenfootImage(text, 30, Color.YELLOW , null);
+       GreenfootImage g = new GreenfootImage(text, 30, Color.WHITE , null);
        setImage(g);
        
       

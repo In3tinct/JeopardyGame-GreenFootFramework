@@ -1,14 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 
-
-interface ICardComponent
-{
-    public void addQCard(ICardComponent ques);
-    public void removeQCard(ICardComponent ques);
-    public void displayQCard();
-    public ICardComponent getQCard(int pos);
-};
 /**
  * Write a description of class Button here.
  * 
@@ -44,13 +36,13 @@ public class QuestionCardLeaf extends Actor implements ICardComponent
     
     public void displayQCard()
     {
+            
             getWorld().addObject(new QuestionScreen(),100,100);
             getWorld().addObject(new Question("Barack Obama is president of which country?"),305,60);
             getWorld().addObject(new TextField("a. India"),100,180);
             getWorld().addObject(new TextField("b. United States"),149,216);
             getWorld().addObject(new TextField("c. Europe"),114,256);
             getWorld().addObject(new TextField("d. Australia"),123,296);
-            
             getWorld().removeObject(this);
     }
     
