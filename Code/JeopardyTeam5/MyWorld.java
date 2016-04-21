@@ -18,8 +18,8 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x454 cells with a cell size of 1x1 pixels.
         super(600,454,1);
-       addObject(new MainScreen(),290,187);
-       addObject(new TextFieldForMainScreen("Please Click on the image below to play the game",Color.BLACK),300,70);
+       addObject(new MainScreen(),300,225);
+       addObject(new TextFieldForMainScreen("Please Click on the image below to play the game",Color.BLUE),300,70);
         
         
     }
