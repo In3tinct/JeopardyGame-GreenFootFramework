@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=QuestionCardLeaf272
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Button\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=text
+comment1.target=QuestionCardLeaf272(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Button\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ displayQCard()
+comment4.params=pos
+comment4.target=ICardComponent\ getQCard(int)
+comment5.params=ques
+comment5.target=void\ addQCard(ICardComponent)
+comment6.params=ques
+comment6.target=void\ removeQCard(ICardComponent)
+numComments=7
