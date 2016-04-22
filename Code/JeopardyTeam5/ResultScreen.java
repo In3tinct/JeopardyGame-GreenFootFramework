@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ResultScreen extends Actor
+public class ResultScreen extends OpenCard
 {
     /**
      * Act - do whatever the ResultScreen wants to do. This method is called whenever
@@ -15,8 +15,7 @@ public class ResultScreen extends Actor
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)){
-            getWorld().removeObjects(getWorld().getObjects(ExplanationText.class));
-           getWorld().removeObject(this);
+           timeOutCard((MyWorld)getWorld());
        }
     }    
 }
