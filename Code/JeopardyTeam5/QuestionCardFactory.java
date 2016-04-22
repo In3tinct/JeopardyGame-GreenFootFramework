@@ -1,11 +1,12 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * Write a description of class QuestionCardFactory here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class QuestionCardFactory  
-{
+public class QuestionCardFactory{
     public ICardComponent generateQCard(String typeOfCard,String score){
         if(typeOfCard.equals("202"))
             return new QuestionCardLeaf202(score);
@@ -18,5 +19,4 @@ public class QuestionCardFactory
         else 
             return null;
     }
-
 }

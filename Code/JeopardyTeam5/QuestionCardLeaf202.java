@@ -1,8 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
-
 /**
- * Write a description of class QuestionCardLeaf202 here.
+ * Write a description of class Button here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -19,11 +18,11 @@ public class QuestionCardLeaf202 extends Actor implements ICardComponent
      */
     public void act(){   
         if(Greenfoot.mouseClicked(this)){
-            displayQCard();
+            displayQCard(this);
         }
     } 
        
-    public void displayQCard(){
+    public void displayQCard(ICardComponent ques){
         getWorld().addObject(new QuestionScreen(),100,100);
         getWorld().addObject(new Question("Barack Obama is president of which country? 202"),305,60);
         getWorld().addObject(new TextField("a. India"),91,191);
@@ -39,4 +38,3 @@ public class QuestionCardLeaf202 extends Actor implements ICardComponent
     
     
 }
-

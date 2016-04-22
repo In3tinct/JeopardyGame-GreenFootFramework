@@ -18,11 +18,11 @@ public class QuestionCardLeaf207 extends Actor implements ICardComponent
      */
     public void act(){   
         if(Greenfoot.mouseClicked(this)){
-            displayQCard();
+            displayQCard(new ClosedCard());
         }
     } 
        
-    public void displayQCard(){
+    public void displayQCard(ICardComponent ques){
         getWorld().addObject(new QuestionScreen(),100,100);
         getWorld().addObject(new Question("Barack Obama is president of which country? 207"),305,60);
         getWorld().addObject(new TextField("a. India"),91,191);
