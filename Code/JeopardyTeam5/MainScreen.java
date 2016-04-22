@@ -17,19 +17,19 @@ public class MainScreen extends Actor
     {
         if(Greenfoot.mouseClicked(this)){
             getWorld().removeObjects(getWorld().getObjects(TextFieldForMainScreen.class));
-            getWorld().addObject(new TextFieldForMainScreen("Please select category to proceed",Color.BLUE),300,70);
-            MainTopicComposite Category202 = new MainTopicComposite();
-            MainTopicComposite Category272 = new MainTopicComposite();
-            MainTopicComposite Category273 = new MainTopicComposite();
-            MainTopicComposite Category207 = new MainTopicComposite();
+            getWorld().addObject(new TextFieldForMainScreen("Please select category to proceed",Color.BLUE),302,294);
+            MainTopicComposite Category202 = new MainTopicComposite("202");
+            MainTopicComposite Category272 = new MainTopicComposite("272");
+            MainTopicComposite Category273 = new MainTopicComposite("273");
+            MainTopicComposite Category207 = new MainTopicComposite("207");
             Category272.setName("272");
             Category202.setName("202");
             Category273.setName("273");
             Category207.setName("207");
-            getWorld().addObject(Category202,100,130);
-            getWorld().addObject(Category272,500,130);
-            getWorld().addObject(Category273,100,400);
-            getWorld().addObject(Category207,500,400);
+            getWorld().addObject(Category202,105,70);
+            getWorld().addObject(Category272,476,389);
+            getWorld().addObject(Category273,120,387);
+            getWorld().addObject(Category207,491,74);
         }
     }   
     
