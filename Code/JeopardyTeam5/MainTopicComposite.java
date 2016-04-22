@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
-
+import java.awt.Color;
 /**
  * Write a description of class MainTopicComposite here.
  * 
@@ -17,7 +17,17 @@ public class MainTopicComposite extends Actor implements ICardComponent
     ArrayList<ICardComponent> questionCards = new ArrayList<>();
     QuestionCardFactory factory = new QuestionCardFactory();
     
-    public MainTopicComposite(){
+    public MainTopicComposite(String text){
+        if(text=="202"){
+            setImage("202.JPG");
+        }else if(text=="272"){
+            setImage("272.JPG");
+        }else if(text=="273"){
+            setImage("273.JPG");
+        }else if(text=="207"){
+            setImage("207.JPG");
+        }
+        
     }
     /**
      * Act - do whatever the MainTopicComposite wants to do. This method is called whenever
@@ -48,7 +58,6 @@ public class MainTopicComposite extends Actor implements ICardComponent
         for(int y=0, sc=0;y<ycoords.length;y++, sc++) {
 
             for(int x=0;x<xcoords.length;x++) {
-                
                 ICardComponent ques = getQCard(pos); 
                 addQCardToWorld(ques, x, y);
                 pos++;
@@ -69,7 +78,7 @@ public class MainTopicComposite extends Actor implements ICardComponent
         questionCards.remove(ques);
     }
     
-    public void displayQCard(){}
+    public void displayQCard(ICardComponent ques){}
     
     public ICardComponent getQCard(int pos){
         return questionCards.get(pos);
