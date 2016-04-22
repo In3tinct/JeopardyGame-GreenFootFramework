@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=MainTopicComposite
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MainTopicComposite\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=text
+comment1.target=MainTopicComposite(java.lang.String)
+comment10.params=name
+comment10.target=void\ setName(java.lang.String)
+comment11.params=
+comment11.target=java.lang.String\ getName()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ MainTopicComposite\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=categoryType
+comment3.target=void\ createAllQCards(java.lang.String)
+comment4.params=
+comment4.target=void\ addAllQCardsToWorld()
+comment5.params=ques\ x\ y
+comment5.target=void\ addQCardToWorld(ICardComponent,\ int,\ int)
+comment6.params=ques
+comment6.target=void\ addQCard(ICardComponent)
+comment7.params=ques
+comment7.target=void\ removeQCard(ICardComponent)
+comment8.params=ques
+comment8.target=void\ displayQCard(ICardComponent)
+comment9.params=pos
+comment9.target=ICardComponent\ getQCard(int)
+numComments=12
