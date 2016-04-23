@@ -1,6 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 import java.awt.Color;
+import java.util.*;
 /**
  * Write a description of class MainTopicComposite here.
  * 
@@ -9,10 +10,10 @@ import java.awt.Color;
  */
 public class MainTopicComposite extends Actor implements ICardComponent
 {
-   
-    int xcoords[] = {66,158,256,349,443,537};
-    int ycoords[] = {127,198,269,340,411};
-    String score[] = {"100","200","300","400","500"};
+   int cnt=0;
+    int xcoords[] = {66,158};
+    int ycoords[] = {127,198};
+    String score[] = {"100","200"};
     private String categoryName;
     ArrayList<ICardComponent> questionCards = new ArrayList<>();
     QuestionCardFactory factory = new QuestionCardFactory();
@@ -34,16 +35,44 @@ public class MainTopicComposite extends Actor implements ICardComponent
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act(){
+        
         if(Greenfoot.mouseClicked(this)){
             //Removing the first screen object
-            getWorld().removeObjects(getWorld().getObjects(MainScreen.class));
+            //getWorld().removeObjects(getWorld().getObjects(MainScreen.class));
             getWorld().addObject(new GameScreen(),300,225);
             createAllQCards(this.getName());
             addAllQCardsToWorld();
             getWorld().addObject(new Score("Score: "),230,446);
         }
+        if(checkIfAllCardsDisabled(this.questionCards) && cnt==0){
+            getWorld().addObject(new RoundOverText("Game Over",Color.RED),279,232);
+            getWorld().removeObject(this);
+            cnt++;
+            
+        }
    }  
+   
+   private boolean checkIfAllCardsDisabled(ArrayList<ICardComponent> questionCards){
+      Iterator<ICardComponent> itr = questionCards.iterator();
+      System.out.println("size::"+questionCards.size());
+       if(questionCards.size()>0){
+        while (itr.hasNext()) {
+		    ICardComponent card=itr.next();
+			if(card instanceof QuestionCardLeaf273){
+			    ICardState state = ((QuestionCardLeaf273)card).getCardState();
+			    if(!(state instanceof DisabledCard))
+			     return false;
+            }
+           }
+        }
+          else{
+           return false;
+        }
+       
+		return true;
     
+    }
+   
     void createAllQCards(String categoryType){
         for(int y=0, sc=0;y<ycoords.length;y++, sc++) {
            for(int x=0;x<xcoords.length;x++) {
