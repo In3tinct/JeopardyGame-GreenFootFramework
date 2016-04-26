@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=ClosedCard
-comment1.params=world\ state
-comment1.target=ICardState\ displayQCard(MyWorld,\ ICardState)
-comment2.params=world
-comment2.target=void\ timeOutCard(MyWorld)
-comment3.params=
-comment3.target=void\ resetCard()
-numComments=4
