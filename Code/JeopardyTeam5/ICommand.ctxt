@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=ICommand
-comment1.params=world\ state\ typeOfTopic\ score\ x
-comment1.target=void\ execute(MyWorld,\ ICardState,\ java.lang.String,\ java.lang.String,\ int)
+comment0.text=\n\ Write\ a\ description\ of\ class\ Command\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=world\ state\ card\ typeOfTopic\ score\ x
+comment1.target=void\ execute(MyWorld,\ ICardState,\ ICardComponent,\ java.lang.String,\ java.lang.String,\ int)
 numComments=2

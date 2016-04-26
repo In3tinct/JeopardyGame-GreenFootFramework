@@ -35,8 +35,8 @@ public class QuestionCardLeaf202 extends Actor implements ICardComponent
     }
     
     public void displayQCard(ICardComponent card){
-        ICardComponent ic=this.cardState.displayQCard((MyWorld)getWorld(),this.cardState,card);
-        System.out.println("ic::QCL202"+ic);
+      //  ICardComponent ic=this.cardState.displayQCard((MyWorld)getWorld(),this.cardState,card);
+
     }
    public void timeOutCard(MyWorld world,ICardComponent card){
        this.cardState.timeOutCard(world,card);

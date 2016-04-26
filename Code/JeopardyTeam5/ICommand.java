@@ -5,5 +5,5 @@
  * @version (a version number or a date)
  */
 interface ICommand {
-public void execute(MyWorld world,ICardState state,String typeOfTopic,String score, int x);
+public void execute(MyWorld world,ICardState state,ICardComponent card,String typeOfTopic,String score, int x);
 };

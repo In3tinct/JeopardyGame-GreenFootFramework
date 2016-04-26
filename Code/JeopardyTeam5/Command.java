@@ -25,10 +25,10 @@ public class Command  implements ICommand
      * @return     the sum of x and y 
      */
     
-    public void execute(MyWorld world,ICardState state,String typeOfTopic,String score, int x)
+    public void execute(MyWorld world,ICardState state,ICardComponent card,String typeOfTopic,String score, int x)
     {
-         ICardState ic=state.displayQCard((MyWorld)world,state);
-         icard.setCardState(ic);
+         ICardComponent icardcomp=state.displayQCard((MyWorld)world,state,card,typeOfTopic,score,x);
+       //  icard.setCardState(ic);
        // world.removeObject(icard);
     }
     

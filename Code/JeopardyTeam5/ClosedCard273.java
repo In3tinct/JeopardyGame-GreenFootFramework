@@ -3,7 +3,7 @@ import java.awt.Color;
 
 public class ClosedCard273 extends QuestionCardLeaf273 implements ICardState {
     
-    public ICardComponent displayQCard(MyWorld world,ICardState state, ICardComponent card) {
+    public ICardComponent displayQCard(MyWorld world,ICardState state, ICardComponent card,String typeOfTopic,String score, int x) {
         world.setCurrentCard(card);
         world.addObject(new QuestionScreen(),100,100);
         world.addObject(new Question("Barack Obama is president of which country? 273",card),305,60);

@@ -3,7 +3,7 @@ import java.awt.Color;
 
 public class DisabledCard272 extends QuestionCardLeaf272 implements ICardState {
 	@Override
-	public ICardComponent displayQCard(MyWorld world,ICardState state,ICardComponent card) {
+	public ICardComponent displayQCard(MyWorld world,ICardState state,ICardComponent card,String typeOfTopic,String score, int x) {
 		return null;
 
 	}
