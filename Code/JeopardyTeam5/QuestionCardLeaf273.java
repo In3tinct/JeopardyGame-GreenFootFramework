@@ -37,9 +37,9 @@ public class QuestionCardLeaf273 extends Actor implements ICardComponent
         ICardComponent ic=this.cardState.displayQCard((MyWorld)getWorld(),this.cardState,card);
         
     }
-    /* public void resetCard(ICardComponent card){
-        cardState.resetCard();
-    }*/
+    public void timeOutCard(MyWorld world,ICardComponent card){
+       this.cardState.timeOutCard(world,card);
+    }
     
      /**
      * Act - do whatever the Button wants to do. This method is called whenever

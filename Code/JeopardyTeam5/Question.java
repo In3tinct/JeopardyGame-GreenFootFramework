@@ -12,11 +12,13 @@ public class Question extends Actor
 {
     GreenfootImage g;
     String ans = "";
+    ICardComponent card;
     
-    public Question(String text) {
+    public Question(String text,ICardComponent card) {
         ans = text;
         g = new GreenfootImage(text, 30, Color.YELLOW , null);
         setImage(g);
+        this.card=card;
         
     }
     

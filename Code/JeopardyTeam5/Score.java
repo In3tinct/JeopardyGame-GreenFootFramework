@@ -8,18 +8,15 @@ import java.awt.event.*;
  * @author Natasha 
  * @version (a version number or a date)
  */
-public class Score extends Actor implements Observer
+public class Score extends Actor
 {
     // instance variables - replace the example below with your own
-  //int points;
-  //int finalSore;
-  public CountScore subject; 
-    
+    int points=0;
+
     public Score(String text)
     {
          GreenfootImage g = new GreenfootImage(text, 18, Color.WHITE , null);
        setImage(g);
-       
     }
     public void act()
     {
@@ -27,9 +24,5 @@ public class Score extends Actor implements Observer
             if(Greenfoot.mouseClicked(this)){
         getWorld().removeObject(this);
         
-    }}
-    public void update(){
-    
-      }
-}
-
+    }
+}}

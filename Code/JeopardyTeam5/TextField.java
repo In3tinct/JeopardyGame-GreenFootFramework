@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 //import java.awt.*;
 import java.awt.event.*;
@@ -12,13 +12,14 @@ public class TextField extends Actor
 {
     GreenfootImage g;
     String ans = "";
+    ICardComponent card;
     
-    public TextField(String text) {
+    public TextField(String text,ICardComponent card) {
         ans = text;
         g = new GreenfootImage(text, 30, Color.YELLOW , null);
         g.scale(100,100);
         setImage(g);
-        
+        this.card =card;
     }
     
     /**
@@ -44,9 +45,18 @@ public class TextField extends Actor
         
         
         if(Greenfoot.mouseClicked(this)){
-            
-            getWorld().addObject(new ResultScreen(),100,100);
-            getWorld().addObject(new ExplanationText("Correct Answer"),100,100);
+            ((MyWorld)getWorld()).answerClicked=true;
+            ((MyWorld)getWorld()).stopTimer();
+            if(this.card instanceof QuestionCardLeaf273){
+                getWorld().addObject(new ResultScreen273(this.card),100,100);
+            }else if(this.card instanceof QuestionCardLeaf272){
+                getWorld().addObject(new ResultScreen272(this.card),100,100);
+            }else if(this.card instanceof QuestionCardLeaf207){
+                getWorld().addObject(new ResultScreen207(this.card),100,100);
+            }else if(this.card instanceof QuestionCardLeaf202){
+                getWorld().addObject(new ResultScreen202(this.card),100,100);
+            }
+            getWorld().addObject(new ExplanationText("Correct Answer",this.card),100,100);
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
             getWorld().removeObjects(getWorld().getObjects(Question.class));
             getWorld().removeObjects(getWorld().getObjects(TextField.class));

@@ -8,8 +8,9 @@ import java.awt.Color;
  */
 public class ExplanationText extends Actor
 {
-       public ExplanationText(String text) {
-      
+    ICardComponent card;
+    public ExplanationText(String text,ICardComponent card) {
+        this.card=card;
        GreenfootImage g = new GreenfootImage(text, 30, Color.YELLOW , null);
        setImage(g);
        

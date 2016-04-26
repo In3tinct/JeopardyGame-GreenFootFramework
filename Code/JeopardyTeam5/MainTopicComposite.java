@@ -54,13 +54,24 @@ public class MainTopicComposite extends Actor implements ICardComponent
    
    private boolean checkIfAllCardsDisabled(ArrayList<ICardComponent> questionCards){
       Iterator<ICardComponent> itr = questionCards.iterator();
-      System.out.println("size::"+questionCards.size());
        if(questionCards.size()>0){
         while (itr.hasNext()) {
 		    ICardComponent card=itr.next();
 			if(card instanceof QuestionCardLeaf273){
 			    ICardState state = ((QuestionCardLeaf273)card).getCardState();
-			    if(!(state instanceof DisabledCard))
+			    if(!(state instanceof DisabledCard273))
+			     return false;
+            }else if(card instanceof QuestionCardLeaf272){
+			    ICardState state = ((QuestionCardLeaf272)card).getCardState();
+			    if(!(state instanceof DisabledCard272))
+			     return false;
+            }else if(card instanceof QuestionCardLeaf202){
+			    ICardState state = ((QuestionCardLeaf202)card).getCardState();
+			    if(!(state instanceof DisabledCard202))
+			     return false;
+            }else if(card instanceof QuestionCardLeaf207){
+			    ICardState state = ((QuestionCardLeaf207)card).getCardState();
+			    if(!(state instanceof DisabledCard207))
 			     return false;
             }
            }
@@ -74,6 +85,7 @@ public class MainTopicComposite extends Actor implements ICardComponent
     }
    
     void createAllQCards(String categoryType){
+       
         for(int y=0, sc=0;y<ycoords.length;y++, sc++) {
            for(int x=0;x<xcoords.length;x++) {
                 ICardComponent ques = factory.generateQCard(categoryType,score[sc]);

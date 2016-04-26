@@ -14,8 +14,8 @@ public class GameScreen extends Actor
      */
     public void act() 
     {
-        if(getObjectsInRange(600,QuestionCardLeaf273.class).isEmpty()){
+        /*if(getObjectsInRange(600,QuestionCardLeaf273.class).isEmpty()){
             getWorld().removeObject(this);
-        }
+        }*/
     }    
 }

@@ -30,8 +30,11 @@ public class MainScreen extends Actor
             getWorld().addObject(Category272,476,389);
             getWorld().addObject(Category273,120,387);
             getWorld().addObject(Category207,491,74);
+           }
         }
+        
+        
     }   
     
 
-}
+

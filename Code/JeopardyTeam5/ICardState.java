@@ -1,7 +1,7 @@
  import greenfoot.*;  
 
 public interface ICardState {
-    	public ICardState displayQCard(MyWorld world,ICardState state);
-    	public void timeOutCard(MyWorld world);
+    	public ICardComponent displayQCard(MyWorld world,ICardState state,ICardComponent card);
+    	public void timeOutCard(MyWorld world,ICardComponent card);
     	public void resetCard();
 }

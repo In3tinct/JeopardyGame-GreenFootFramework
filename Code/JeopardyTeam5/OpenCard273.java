@@ -10,9 +10,12 @@ public class OpenCard273  extends QuestionCardLeaf273 implements ICardState {
 
     @Override
     public void timeOutCard(MyWorld world,ICardComponent card) {
+        world.removeObjects(world.getObjects(Question.class));
+        world.removeObjects(world.getObjects(TextField.class));
+        world.removeObjects(world.getObjects(QuestionScreen.class));
         world.removeObjects(world.getObjects(ExplanationText.class));
         world.removeObjects(world.getObjects(ResultScreen273.class));
-        ((QuestionCardLeaf273)card).setCardState(new DisabledCard273());
+       ((QuestionCardLeaf273)card).setCardState(new DisabledCard273());
         
     }
 
