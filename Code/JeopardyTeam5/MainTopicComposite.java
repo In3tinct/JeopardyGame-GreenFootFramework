@@ -11,9 +11,9 @@ import java.util.*;
 public class MainTopicComposite extends Actor implements ICardComponent
 {
    int cnt=0;
-    int xcoords[] = {66,158};
-    int ycoords[] = {127,198};
-    String score[] = {"100","200"};
+    int xcoords[] = {66,158,256,349,443,537};
+    int ycoords[] = {127,198,269,340,411};
+    String score[] = {"100","200","300","400","500"};
     private String categoryName;
     ArrayList<ICardComponent> questionCards = new ArrayList<>();
     QuestionCardFactory factory = new QuestionCardFactory();

@@ -13,16 +13,21 @@ public class QuestionCardLeaf202 extends Actor implements ICardComponent
     ICardState cardClosed;
     ICardState cardState;
     //int cardValue = 0;
+    Command openQuestion;  
+    String typeOfTopic;
+    String score;
        
     public QuestionCardLeaf202(){
        }
-    public QuestionCardLeaf202(String text){
+    public QuestionCardLeaf202(String typeOfTopic,String text){
         //this.cardValue= parseInt(text);
         GreenfootImage g = new GreenfootImage(text, 30, Color.YELLOW , null);
         setImage(g);
         cardClosed = new ClosedCard202();
         this.cardState=cardClosed;
-        System.out.println("QCL202:: cardState"+this.cardState);
+        this.typeOfTopic = typeOfTopic;
+        this.score = text;
+        openQuestion = new Command(this);
     }
     
     public void setCardState(ICardState state)   {
@@ -36,7 +41,7 @@ public class QuestionCardLeaf202 extends Actor implements ICardComponent
     
     public void displayQCard(ICardComponent card){
       //  ICardComponent ic=this.cardState.displayQCard((MyWorld)getWorld(),this.cardState,card);
-
+        openQuestion.execute((MyWorld)getWorld(),this.cardState,card,typeOfTopic,score,this.getX());
     }
    public void timeOutCard(MyWorld world,ICardComponent card){
        this.cardState.timeOutCard(world,card);

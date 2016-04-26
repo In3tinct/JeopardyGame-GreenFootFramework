@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class QuestionCardFactory{
     public ICardComponent generateQCard(String typeOfCard,String score){
         if(typeOfCard.equals("202"))
-            return new QuestionCardLeaf202(score);
+            return new QuestionCardLeaf202(typeOfCard,score);
         else if (typeOfCard.equals("272"))
             return new QuestionCardLeaf272(score);
         else if(typeOfCard.equals("273"))
