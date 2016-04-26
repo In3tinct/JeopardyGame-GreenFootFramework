@@ -12,10 +12,11 @@ public class TextFieldForMainScreen extends Actor
     
     GreenfootImage g;
     String ans = "";
+     Color color ;
     
     public TextFieldForMainScreen(String printtext,Color color) {
         String text = printtext;
-        Color color = colorvalue;
+        this.color = color;
         wordWrap(text,color);
     }
     
