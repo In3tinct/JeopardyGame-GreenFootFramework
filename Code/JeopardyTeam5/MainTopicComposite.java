@@ -17,6 +17,12 @@ public class MainTopicComposite extends Actor implements ICardComponent
     private String categoryName;
     ArrayList<ICardComponent> questionCards = new ArrayList<>();
     QuestionCardFactory factory = new QuestionCardFactory();
+    private String filename; 
+    private String[] categories;
+    private ChallengeQuestion[] questions;
+     private String[] answerOrder;
+    private int numQuestions;
+    private static final int MAX_QUESTS=30;
     
     public MainTopicComposite(String text){
         if(text=="202"){
