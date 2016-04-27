@@ -13,13 +13,22 @@ public class TextField extends Actor
     GreenfootImage g;
     String ans = "";
     ICardComponent card;
-    
+    boolean isCorrect;
     public TextField(String text,ICardComponent card) {
         ans = text;
         g = new GreenfootImage(text, 30, Color.YELLOW , null);
         g.scale(100,100);
         setImage(g);
         this.card =card;
+    }
+    
+    public TextField(String text,ICardComponent card,boolean isCorrect) {
+        ans = text;
+        g = new GreenfootImage(text, 30, Color.YELLOW , null);
+        g.scale(100,100);
+        setImage(g);
+        this.card =card;
+        this.isCorrect=isCorrect;
     }
     
     /**
@@ -56,7 +65,14 @@ public class TextField extends Actor
             }else if(this.card instanceof QuestionCardLeaf202){
                 getWorld().addObject(new ResultScreen202(this.card),100,100);
             }
+            if(this.isCorrect==true)
+            {
             getWorld().addObject(new ExplanationText("Correct Answer",this.card),100,100);
+            }
+            else
+            {
+                getWorld().addObject(new ExplanationText("InCorrect Answer",this.card),100,100);
+            }
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
             getWorld().removeObjects(getWorld().getObjects(Question.class));
             getWorld().removeObjects(getWorld().getObjects(TextField.class));
