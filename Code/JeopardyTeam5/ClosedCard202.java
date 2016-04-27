@@ -31,7 +31,7 @@ public class ClosedCard202 extends QuestionCardLeaf202 implements ICardState {
 			world.addObject(new TextField(q[i].answers.get(3).ans,card,q[i].answers.get(3).isCorrect),118,356);
 			world.answerClicked=false;
 			world.startTimer();
-		   ((QuestionCardLeaf202)card).setCardState(new OpenCard273());
+		   ((QuestionCardLeaf202)card).setCardState(new OpenCard202());
 			
 		   }
 		}
