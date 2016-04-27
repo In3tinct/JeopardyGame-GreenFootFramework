@@ -19,6 +19,7 @@ public class MyWorld extends World
     private boolean provideTimer = true;
     ICardComponent currentCard;
     boolean answerClicked=false;
+    ChallengeQuestion[] questions;
     
     public void setCurrentCard(ICardComponent card){
        this.currentCard = card;
