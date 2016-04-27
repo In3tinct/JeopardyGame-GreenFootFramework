@@ -80,4 +80,17 @@ public class MyWorld extends World
         addObject(timer, 565, 35);
         
     }
+     public void setQuestions(ChallengeQuestion[] ques) {
+        questions=ques;
+    }
+
+    /**
+     * Return whether a timer is provided or not.
+     *
+     * @return <code>true</code> if a timer is provided; otherwise
+     *         <code>false</code>.
+     */
+    public ChallengeQuestion[] getQuestions() {
+        return questions;
+    }
 }

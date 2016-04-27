@@ -2,6 +2,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 import java.awt.Color;
 import java.util.*;
+import java.io.*;
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.io.*;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import javax.swing.*;
 /**
  * Write a description of class MainTopicComposite here.
  * 
@@ -49,9 +63,29 @@ public class MainTopicComposite extends Actor implements ICardComponent
             //Removing the first screen object
             //getWorld().removeObjects(getWorld().getObjects(MainScreen.class));
             getWorld().addObject(new GameScreen(),300,225);
+            try{
+               if(this.getName()=="273"){
+                   filename="273.txt";
+                }
+            ArrayList<String> lines=loadFile(filename);
+            System.out.println(lines);
+            convertUnicode(lines);
+            readCategories(lines);
+            readQuestions(lines);
+            readAnswers(lines);
+            for(int i=0;i<questions.length;i++)
+            {
+                System.out.println(questions.length);
+                
+            System.out.println(i+questions[i].cat);
+        }//System.out.println(questions[29]);
+            //System.out.println(answerOrder[1]);
+            ((MyWorld)getWorld()).setQuestions(questions);
             createAllQCards(this.getName());
             addAllQCardsToWorld();
             getWorld().addObject(new Score("Score: "),230,446);
+        }catch(IOException ioe){
+            }
         }
         if(checkIfAllCardsDisabled(this.questionCards) && cnt==0){
             getWorld().addObject(new RoundOverText("Game Over",Color.RED),279,232);
