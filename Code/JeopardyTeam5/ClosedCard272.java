@@ -40,7 +40,7 @@ public class ClosedCard272 extends QuestionCardLeaf272 implements ICardState {
 
     @Override
     public void timeOutCard(MyWorld world,ICardComponent card) {
-        ((QuestionCardLeaf272)card).setCardState(new DisabledCard273());
+        ((QuestionCardLeaf272)card).setCardState(new DisabledCard202());
 
     }
 

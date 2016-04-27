@@ -70,6 +70,9 @@ public class MainTopicComposite extends Actor implements ICardComponent
                else if(this.getName()=="272"){
                    filename="272.txt";
                 }
+               else if(this.getName()=="202"){
+                   filename="202.txt";
+                }
             ArrayList<String> lines=loadFile(filename);
             System.out.println(lines);
             convertUnicode(lines);
@@ -163,6 +166,15 @@ public class MainTopicComposite extends Actor implements ICardComponent
             getWorld().addObject(new TextFieldForMainScreen("Security",Color.BLACK,22),349,50);
             getWorld().addObject(new TextFieldForMainScreen("Db",Color.BLACK,22),443,50);
             getWorld().addObject(new TextFieldForMainScreen("SaaS",Color.BLACK,22),537,50);
+        }
+        else if(categoryName == "202")
+        {
+            getWorld().addObject(new TextFieldForMainScreen("Scrum",Color.BLACK,22),66,50);
+            getWorld().addObject(new TextFieldForMainScreen("Agile",Color.BLACK,22),158,50);
+            getWorld().addObject(new TextFieldForMainScreen("XP",Color.BLACK,22),256,50);
+            getWorld().addObject(new TextFieldForMainScreen("GoF",Color.BLACK,22),349,50);
+            getWorld().addObject(new TextFieldForMainScreen("Lean",Color.BLACK,22),443,50);
+            getWorld().addObject(new TextFieldForMainScreen("Kanban",Color.BLACK,22),537,50);
         }
         
     }
