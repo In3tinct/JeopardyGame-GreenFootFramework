@@ -11,7 +11,7 @@ public class QuestionCardFactory{
         if(typeOfCard.equals("202"))
             return new QuestionCardLeaf202(typeOfCard,score);
         else if (typeOfCard.equals("272"))
-            return new QuestionCardLeaf272(score);
+            return new QuestionCardLeaf272(typeOfCard,score);
         else if(typeOfCard.equals("273"))
             return new QuestionCardLeaf273(typeOfCard,score);
         else if(typeOfCard.equals("207"))
