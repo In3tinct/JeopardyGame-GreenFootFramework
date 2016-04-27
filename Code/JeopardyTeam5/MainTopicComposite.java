@@ -23,6 +23,7 @@ public class MainTopicComposite extends Actor implements ICardComponent
      private String[] answerOrder;
     private int numQuestions;
     private static final int MAX_QUESTS=30;
+    private static final int MAX_CATS = 6;
     
     public MainTopicComposite(String text){
         if(text=="202"){
@@ -43,6 +44,8 @@ public class MainTopicComposite extends Actor implements ICardComponent
     public void act(){
         
         if(Greenfoot.mouseClicked(this)){
+            categories = new String[MAX_CATS];
+            questions=new ChallengeQuestion[MAX_QUESTS];
             //Removing the first screen object
             //getWorld().removeObjects(getWorld().getObjects(MainScreen.class));
             getWorld().addObject(new GameScreen(),300,225);
