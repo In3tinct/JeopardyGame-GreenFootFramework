@@ -174,4 +174,121 @@ public class MainTopicComposite extends Actor implements ICardComponent
     public String getName(){
         return categoryName;
     }
+    private ArrayList<String> loadFile(String filename) throws IOException {
+        ArrayList<String> lines = new ArrayList<String>();
+        // Allow loading from JAR files
+        ClassLoader classLoader = getClass().getClassLoader();
+        InputStream is = classLoader.getResourceAsStream(filename);
+        if (is == null) {
+            throw new IOException("No such file: " + filename);
+        }
+        BufferedReader reader = new BufferedReader(
+                                new InputStreamReader(is));
+        String line = reader.readLine();
+        while (line != null) {
+            if (!line.equals("") && !line.startsWith("#")) {
+                lines.add(line);
+            }
+            line = reader.readLine();
+        }
+        reader.close();
+        return lines;
+    }
+    private void convertUnicode(ArrayList<String> lines) {
+        Pattern unicode = Pattern.compile("\\\\u([0-9A-Fa-f]+)");
+        for (int i = 0; i < lines.size(); i++) {
+            Matcher m = unicode.matcher(lines.get(i));
+            StringBuffer sb = new StringBuffer();
+            while (m.find()) {
+                int code = Integer.valueOf(m.group(1), 16);
+                String uc = "" + Character.valueOf((char)code);
+                m.appendReplacement(sb, uc);
+            }
+            m.appendTail(sb);
+            lines.set(i, new String(sb));
+        }
+    }
+    
+    private void readCategories(final ArrayList<String> lines) {
+        Pattern cat = Pattern.compile("(?i):CAT(\\d+):(.+)");
+        Matcher m = cat.matcher("");
+        for (int i = 0; i < lines.size(); i++) {
+            m.reset(lines.get(i));
+            if (m.matches()) {
+                int index = Integer.valueOf(m.group(1)) - 1;
+                System.out.println(index);
+                if (index >= MAX_CATS) {
+                    System.out.println("WARNING: Category number "
+                    + (index + 1) + " exceeds maximum allowed ("
+                    + MAX_CATS + ")");
+                } else if (categories[index] != null ) {
+                    System.out.println("WARNING: repeating category "
+                        + (index + 1));
+                } else {
+                    categories[index] = m.group(2);
+                    //Map.put(m.group(2),null);
+                }
+            }
+        }
+    }
+
+    private void readQuestions(final ArrayList<String> lines) {
+        Pattern qst = Pattern.compile("(?i):QUEST(\\d+):(\\d+):(.+)");
+        Matcher m = qst.matcher("");
+        numQuestions = 0;
+        for (int i = 0; i < lines.size(); i++) {
+            m.reset(lines.get(i));
+            if (m.matches()) {
+                int index = Integer.valueOf(m.group(1)) - 1;
+                //System.out.println("Q"+index/5);
+                if (index >= MAX_QUESTS) {
+                    System.out.println("ERROR: QUESTION number "
+                    + (index + 1) + " exceeds maximum allowed ("
+                    + MAX_QUESTS + ")");
+                } else {
+                    int value = Integer.valueOf(m.group(2));
+                    ChallengeQuestion question = new ChallengeQuestion(m.group(3), value,categories[index/5]);
+                    if (questions[index] != null) {
+                        System.out.println("WARNING: repeating question "
+                            + (index + 1));
+                    } else {
+                        numQuestions++;
+                    }
+                    questions[index] = question;
+                }
+            }
+        }
+        // Adjust count for final round question
+        if (questions[29] != null) numQuestions--;
+    }
+    
+    private void readAnswers(final ArrayList<String> lines) {
+        Pattern ans = Pattern.compile("(?i):ANSWER(\\d+):(\\w):(.+)");
+        Matcher m = ans.matcher("");
+        for (int i = 0; i < lines.size(); i++) {
+            m.reset(lines.get(i));
+            if (m.matches()) {
+                int index = Integer.valueOf(m.group(1)) - 1;
+                //System.out.println("Q"+index);
+                if (index >= MAX_QUESTS) {
+                    System.out.println("ERROR: ANSWER for question number "
+                    + (index + 1) + " exceeds maximum allowed question ("
+                    + MAX_QUESTS + ")");
+                } else if (questions[index] == null) {
+                        System.out.println("ERROR: ANSWER number "
+                            + (index + 1) + "has no question.");
+                } else {
+                    String correct = m.group(2);
+                    ChallengeQuestion question = questions[index];
+                    
+                    if (correct.equalsIgnoreCase("T")) {
+                        //System.out.println(m.group(3));
+                        question.addAnswer(m.group(3), true);
+                    } else {
+                        question.addAnswer(m.group(3), false);
+                    }
+                }
+            }
+        }
+    } 
 }
