@@ -67,6 +67,9 @@ public class MainTopicComposite extends Actor implements ICardComponent
                if(this.getName()=="273"){
                    filename="273.txt";
                 }
+               else if(this.getName()=="272"){
+                   filename="272.txt";
+                }
             ArrayList<String> lines=loadFile(filename);
             System.out.println(lines);
             convertUnicode(lines);
@@ -152,6 +155,16 @@ public class MainTopicComposite extends Actor implements ICardComponent
     void addQCardToWorld(ICardComponent ques, int x, int y){
         Actor q = (Actor)ques;
         getWorld().addObject(q, xcoords[x], ycoords[y]);
+        if(categoryName == "272")
+        {
+            getWorld().addObject(new TextFieldForMainScreen("Cloud",Color.BLACK,22),66,50);
+            getWorld().addObject(new TextFieldForMainScreen("Linux",Color.BLACK,22),158,50);
+            getWorld().addObject(new TextFieldForMainScreen("BigData",Color.BLACK,22),256,50);
+            getWorld().addObject(new TextFieldForMainScreen("Security",Color.BLACK,22),349,50);
+            getWorld().addObject(new TextFieldForMainScreen("Db",Color.BLACK,22),443,50);
+            getWorld().addObject(new TextFieldForMainScreen("SaaS",Color.BLACK,22),537,50);
+        }
+        
     }
     
     public void addQCard(ICardComponent ques){

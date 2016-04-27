@@ -21,7 +21,10 @@ public class TextFieldForMainScreen extends Actor
        color = colorvalue;
        wordWrap(text,color);
     }
-    
+    public TextFieldForMainScreen(String printtext,Color colorvalue,int font) {
+       GreenfootImage g = new GreenfootImage(printtext, font, colorvalue , null);
+        setImage(g);
+    }
     public void wordWrap(String printtext,Color colorvalue)
         {
           int width = 600; // maximum width of a line
