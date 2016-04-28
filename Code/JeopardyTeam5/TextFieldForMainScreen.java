@@ -43,7 +43,7 @@ public class TextFieldForMainScreen extends Actor
          GreenfootImage image = new GreenfootImage(width, height*lines.length); // final image
           for (int i=0; i<lines.length; i++)
               { // draw each line image on final image
-	             GreenfootImage line = new GreenfootImage(lines[i], size, colorvalue, null);
+	           GreenfootImage line = new GreenfootImage(lines[i], size, colorvalue, null);
               image.drawImage(line, 10, i*height);    
               }
               setImage(image);        

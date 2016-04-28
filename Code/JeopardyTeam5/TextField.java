@@ -1,4 +1,4 @@
-    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 //import java.awt.*;
 import java.awt.event.*;
@@ -12,21 +12,21 @@ public class TextField extends Actor
 {
     GreenfootImage g;
     String ans = "";
+    Color color;
     ICardComponent card;
     boolean isCorrect;
-    public TextField(String text,ICardComponent card) {
+    /*public TextField(String text,ICardComponent card) {
         ans = text;
         g = new GreenfootImage(text, 30, Color.YELLOW , null);
         g.scale(100,100);
         setImage(g);
         this.card =card;
-    }
+    }*/
     
     public TextField(String text,ICardComponent card,boolean isCorrect) {
         ans = text;
-        g = new GreenfootImage(text, 30, Color.YELLOW , null);
-        g.scale(100,100);
-        setImage(g);
+        color = Color.WHITE;
+        wordWrap(ans,color);
         this.card =card;
         this.isCorrect=isCorrect;
     }
@@ -43,13 +43,13 @@ public class TextField extends Actor
         }
         if(mouse.getActor() == this)
         {
-            g = new GreenfootImage(ans, 30, Color.RED , null);
-            setImage(g);
+          color = Color.RED;
+          wordWrap(ans,color);
         }
         else
         {
-            g = new GreenfootImage(ans, 30, Color.YELLOW , null);
-            setImage(g);
+          color = Color.WHITE;
+          wordWrap(ans,color);
         }
         
         
@@ -71,7 +71,7 @@ public class TextField extends Actor
             }
             else
             {
-                getWorld().addObject(new ExplanationText("InCorrect Answer",this.card),100,100);
+                getWorld().addObject(new ExplanationText("Incorrect Answer",this.card),100,100);
             }
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
             getWorld().removeObjects(getWorld().getObjects(Question.class));
@@ -80,5 +80,22 @@ public class TextField extends Actor
             
         }
     }
+    
+    public void wordWrap(String printtext,Color colorvalue)
+        {
+         int width = 550; // maximum width of a line
+         int size = 30; // font size of text
+         int height = new GreenfootImage(" ", size, null, null).getHeight();
+         String text = ans; 
+          // building the image
+         String[] lines = text.split("\n"); // get lines
+         GreenfootImage image = new GreenfootImage(width, height*lines.length); // final image
+          for (int i=0; i<lines.length; i++)
+              { // draw each line image on final image
+	          GreenfootImage line = new GreenfootImage(lines[i], size, colorvalue, null);
+              image.drawImage(line, 200, i*height);    
+              }
+              setImage(image);        
+      }
     
 }

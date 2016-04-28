@@ -76,16 +76,16 @@ public class MainTopicComposite extends Actor implements ICardComponent
                    filename="207.txt";
                 }
             ArrayList<String> lines=loadFile(filename);
-            System.out.println(lines);
+            //System.out.println(lines);
             convertUnicode(lines);
             readCategories(lines);
             readQuestions(lines);
             readAnswers(lines);
             for(int i=0;i<questions.length;i++)
             {
-                System.out.println(questions.length);
+                //System.out.println(questions.length);
                 
-            System.out.println(i+questions[i].cat);
+           // System.out.println(i+questions[i].cat);
         }//System.out.println(questions[29]);
             //System.out.println(answerOrder[1]);
             ((MyWorld)getWorld()).setQuestions(questions);

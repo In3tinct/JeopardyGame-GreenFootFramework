@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MainTopicComposite
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MainTopicComposite\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ MainTopicComposite\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=text
 comment1.target=MainTopicComposite(java.lang.String)
 comment10.params=pos
@@ -21,7 +21,7 @@ comment17.params=lines
 comment17.target=void\ readAnswers(java.util.ArrayList)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ MainTopicComposite\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ MainTopicComposite\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment3.params=questionCards
 comment3.target=boolean\ checkIfAllCardsDisabled(java.util.ArrayList)
 comment4.params=categoryType

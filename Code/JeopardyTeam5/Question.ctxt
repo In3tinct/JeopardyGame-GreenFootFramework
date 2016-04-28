@@ -1,9 +1,11 @@
 #BlueJ class context
 comment0.target=Question
 comment0.text=\n\ Write\ a\ description\ of\ class\ TextField\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=text\ card
+comment1.params=printtext\ card
 comment1.target=Question(java.lang.String,\ ICardComponent)
-comment2.params=
-comment2.target=void\ act()
-comment2.text=\n\ Act\ -\ do\ whatever\ the\ TextField\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-numComments=3
+comment2.params=printtext\ colorvalue
+comment2.target=void\ wordWrap(java.lang.String,\ java.awt.Color)
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ TextField\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=4

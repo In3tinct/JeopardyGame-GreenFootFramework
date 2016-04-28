@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Apr 26 19:54:55 PDT 2016
+#Thu Apr 28 13:02:12 PDT 2016
 target24.type=ClassTarget
 target16.name=Question
 dependency164.to=ResultScreen202
@@ -68,7 +68,7 @@ dependency170.type=UsesDependency
 dependency147.to=QuestionScreen
 dependency68.to=MyWorld
 target32.width=100
-mainWindow.width=1252
+mainWindow.width=1251
 dependency142.from=OpenCard202
 dependency118.type=UsesDependency
 target8.showInterface=false
@@ -738,7 +738,7 @@ target38.name=MainScreen
 target21.type=ClassTarget
 mainWindow.y=23
 target13.name=ResultScreen273
-mainWindow.x=28
+mainWindow.x=29
 target16.y=130
 target16.x=100
 dependency28.from=QuestionCardLeaf207
@@ -908,7 +908,7 @@ target28.name=ClosedCard207
 dependency193.type=UsesDependency
 dependency66.to=ClosedCard207
 editor.swing.0.y=23
-editor.swing.0.x=53
+editor.swing.0.x=16
 mainWindow.height=735
 dependency139.to=ICardState
 dependency192.to=ICardState
