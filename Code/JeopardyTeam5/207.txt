@@ -13,53 +13,53 @@
 
 :CAT1:GREENFOOT: THE CLASS
 
-:QUEST1:100:When you want to work with an image, use this class.
-:ANSWER1:T:GreenfootImage
-:ANSWER1:F:Actor
-:ANSWER1:F:Greenfoot
-:ANSWER1:F:World
+:QUEST1:100:Networking Classes are included in.
+:ANSWER1:F:Java.IO.*
+:ANSWER1:T:Java.net.*
+:ANSWER1:F:Java.util.*
+:ANSWER1:F:Java.lang.*
 :ANSWERORDER1:randomized
 :EXPLANATION1:When you look at the Greenfoot documentation, you see that GreenfootImage is an image for an Actor or World to display.
 
-:QUEST2:200:All of this is the stage on which your objects act.
-:ANSWER2:T:World
-:ANSWER2:F:Actor
-:ANSWER2:F:Greenfoot
-:ANSWER2:F:Stage
+:QUEST2:200:URL Stands for.
+:ANSWER2:F:Universal Resource Locator
+:ANSWER2:F:Unified Resource Locator
+:ANSWER2:T:Uniform Resource Locator
+:ANSWER2:F:Unique Resource Locator
 :ANSWERORDER2:randomized
 :EXPLANATION2:When you look at the Greenfoot documentation, you see that World is the world in which Actors live.
 
-:QUEST3:300:You can play your music with this class.
-:ANSWER3:T:Greenfoot
-:ANSWER3:F:Actor
-:ANSWER3:F:SoundPlayer
-:ANSWER3:F:World
+:QUEST3:300:Which of the following classes contains IP Address.
+:ANSWER3:T:Inet Class
+:ANSWER3:F:URL Class
+:ANSWER3:F:URL Connection Class
+:ANSWER3:F:Socket Class
 :ANSWERORDER3:randomized
 :EXPLANATION3:When you look at the Greenfoot documentation, you see that Greenfoot is a utility class. One of its methods is playSound(), which plays a sound from a file.
 
-:QUEST4:400:Almost every program you write includes subclasses of these two classes.
-:ANSWER4:T:Actor and World
-:ANSWER4:F:Actor and Greenfoot
-:ANSWER4:F:GreenfootImage and GreenfootSound
-:ANSWER4:F:World and Greenfoot
+:QUEST4:400:Output of transport layer of TCP/IP is.
+:ANSWER4:F:Continuos stream of bytes
+:ANSWER4:F:Frame
+:ANSWER4:T:Packet
+:ANSWER4:F:Mac Frame
 :ANSWERORDER4:randomized
 :EXPLANATION4:Every scenario in Greenfoot subclasses World and Actor.
 
-:QUEST5:500:Objects of this class live within objects of another class and usually contains objects of still other classes.
-:ANSWER5:T:Actor
-:ANSWER5:F:Greenfoot
-:ANSWER5:F:String
-:ANSWER5:F:World
+:QUEST5:500:Output of Application Layer of TCP/IP is.
+:ANSWER5:T:Continous stream of bytes
+:ANSWER5:F:Frame
+:ANSWER5:F:Packet
+:ANSWER5:F:MAC Frame
 :ANSWERORDER5:randomized
 :EXPLANATION5:An Actor lives within a World subclass and often contains other objects such as GreenfootImage or String.
 
 :CAT2:RAW DATA
 
-:QUEST6:100:When you want to store whole numbers in a computer's main memory, use this data type.
-:ANSWER6:T:int
-:ANSWER6:F:String
-:ANSWER6:F:double
-:ANSWER6:F:char
+:QUEST6:100:Port Numbers are represented by.
+:ANSWER6:T:8 bits
+:ANSWER6:F:16 bits
+:ANSWER6:F:32 bits
+:ANSWER6:F:48 bits
 :ANSWERORDER6:randomized
 :EXPLANATION6:The data type of a variable defines the kind of data to store in a computer's main memory. The "int" data type stores integers, which are numbers without a decimal point.
 
