@@ -38,7 +38,9 @@ public class MainTopicComposite extends Actor implements ICardComponent
     private int numQuestions;
     private static final int MAX_QUESTS=30;
     private static final int MAX_CATS = 6;
-    
+     String scores="0";
+     ScoreKeeper scoring;
+     //CountScore obj=new CountScore(scores);
     public MainTopicComposite(String text){
         if(text=="202"){
             setImage("202.JPG");
@@ -92,6 +94,9 @@ public class MainTopicComposite extends Actor implements ICardComponent
             createAllQCards(this.getName());
             addAllQCardsToWorld();
             getWorld().addObject(new Score("Score: "),230,446);
+            scoring=new ScoreKeeper(scores);
+            scores=scoring.view();
+            getWorld().addObject(new PrintScore(scores),268,444);
         }catch(IOException ioe){
             }
         }
