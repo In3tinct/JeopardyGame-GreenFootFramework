@@ -20,10 +20,10 @@ public class ClosedCard207 extends QuestionCardLeaf207 implements ICardState {
 			if(cats.equalsIgnoreCase(q[i].cat) && (Integer.parseInt(score))==q[i].value)
 			{
 			world.addObject(new Question(q[i].que,card),305,60);
-			world.addObject(new TextField(q[i].answers.get(0).ans,card,q[i].answers.get(0).isCorrect),91,191);
-			world.addObject(new TextField(q[i].answers.get(1).ans,card,q[i].answers.get(1).isCorrect),91,247);
-			world.addObject(new TextField(q[i].answers.get(2).ans,card,q[i].answers.get(2).isCorrect),91,302);
-			world.addObject(new TextField(q[i].answers.get(3).ans,card,q[i].answers.get(3).isCorrect),91,356);
+		world.addObject(new TextField(q[i].answers.get(0).ans,card,q[i].answers.get(0).isCorrect,score),91,191);
+            world.addObject(new TextField(q[i].answers.get(1).ans,card,q[i].answers.get(1).isCorrect,score),91,247);
+            world.addObject(new TextField(q[i].answers.get(2).ans,card,q[i].answers.get(2).isCorrect,score),91,302);
+            world.addObject(new TextField(q[i].answers.get(3).ans,card,q[i].answers.get(3).isCorrect,score),91,356);
 			world.answerClicked=false;
 			world.startTimer();
 		   ((QuestionCardLeaf207)card).setCardState(new OpenCard207());
