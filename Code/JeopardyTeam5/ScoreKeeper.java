@@ -16,12 +16,16 @@ public class ScoreKeeper
     public ScoreKeeper(String score){
         
         this.score=score;
+        //score=check1();
         
     }
     public String check1()
     {
         c=new CountScore(score);
         score=c.check();
+        return score;
+    }
+    public String view(){
         return score;
     }
 }
