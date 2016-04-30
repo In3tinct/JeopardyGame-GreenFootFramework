@@ -11,12 +11,13 @@ public class CountScore extends Actor implements Subject
 {
     // instance variables - replace the example below with your own
    int score;
+         int finalscore=0; 
    String value;
    public ArrayList<Observer> observers = new ArrayList<Observer>(); 
    //Observer obj;
    public CountScore(String scored){
     score= Integer.parseInt(scored);
-    
+    value=printScore(score);
     }
    public void act(){
        
@@ -44,14 +45,14 @@ public class CountScore extends Actor implements Subject
     obj.update();
     }
     public String calculate(){
-      int finalscore=0; 
+
       
       finalscore+=score;
         return String.valueOf(finalscore);
     }    
     public String printScore(int score){
         String count=calculate();
-        value=count;
+       value=count;
         return count;
        //getWorld().addObject(new PrintScore(count),268,444); 
     }
