@@ -165,27 +165,27 @@ public class MainTopicComposite extends Actor implements ICardComponent
             getWorld().addObject(new TextFieldForMainScreen("Cloud",Color.BLACK,22),66,50);
             getWorld().addObject(new TextFieldForMainScreen("Linux",Color.BLACK,22),158,50);
             getWorld().addObject(new TextFieldForMainScreen("BigData",Color.BLACK,22),256,50);
-            getWorld().addObject(new TextFieldForMainScreen("Security",Color.BLACK,22),349,50);
+            getWorld().addObject(new TextFieldForMainScreen("Unix",Color.BLACK,22),349,50);
             getWorld().addObject(new TextFieldForMainScreen("Db",Color.BLACK,22),443,50);
-            getWorld().addObject(new TextFieldForMainScreen("SaaS",Color.BLACK,22),537,50);
+            getWorld().addObject(new TextFieldForMainScreen("Mixed",Color.BLACK,22),537,50);
         }
         else if(categoryName == "202")
         {
             getWorld().addObject(new TextFieldForMainScreen("Scrum",Color.BLACK,22),66,50);
             getWorld().addObject(new TextFieldForMainScreen("Agile",Color.BLACK,22),158,50);
             getWorld().addObject(new TextFieldForMainScreen("XP",Color.BLACK,22),256,50);
-            getWorld().addObject(new TextFieldForMainScreen("GoF",Color.BLACK,22),349,50);
-            getWorld().addObject(new TextFieldForMainScreen("Lean",Color.BLACK,22),443,50);
-            getWorld().addObject(new TextFieldForMainScreen("Kanban",Color.BLACK,22),537,50);
+            getWorld().addObject(new TextFieldForMainScreen("Design \n Pattern-1",Color.BLACK,20),349,49);
+            getWorld().addObject(new TextFieldForMainScreen("Design \n Pattern-2",Color.BLACK,20),443,49);
+            getWorld().addObject(new TextFieldForMainScreen("Mixed",Color.BLACK,22),537,50);
         }
         else if(categoryName == "273")
         {
-            getWorld().addObject(new TextFieldForMainScreen("Scrum",Color.BLACK,22),66,50);
-            getWorld().addObject(new TextFieldForMainScreen("Agile",Color.BLACK,22),158,50);
-            getWorld().addObject(new TextFieldForMainScreen("XP",Color.BLACK,22),256,50);
-            getWorld().addObject(new TextFieldForMainScreen("GoF",Color.BLACK,22),349,50);
-            getWorld().addObject(new TextFieldForMainScreen("Lean",Color.BLACK,22),443,50);
-            getWorld().addObject(new TextFieldForMainScreen("Kanban",Color.BLACK,22),537,50);
+            getWorld().addObject(new TextFieldForMainScreen("Node",Color.BLACK,22),66,50);
+            getWorld().addObject(new TextFieldForMainScreen("Angular",Color.BLACK,22),158,50);
+            getWorld().addObject(new TextFieldForMainScreen("JS-1",Color.BLACK,22),256,50);
+            getWorld().addObject(new TextFieldForMainScreen("JS-2",Color.BLACK,22),349,50);
+            getWorld().addObject(new TextFieldForMainScreen("MongoDb",Color.BLACK,22),443,50);
+            getWorld().addObject(new TextFieldForMainScreen("Mixed",Color.BLACK,22),537,50);
         }
         else if(categoryName == "207")
         {

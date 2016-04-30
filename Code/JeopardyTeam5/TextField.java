@@ -67,11 +67,11 @@ public class TextField extends Actor
             }
             if(this.isCorrect==true)
             {
-            getWorld().addObject(new ExplanationText("Correct Answer",this.card),100,100);
+            getWorld().addObject(new ExplanationText("Correct Answer",this.card),245,205);
             }
             else
             {
-                getWorld().addObject(new ExplanationText("Incorrect Answer",this.card),100,100);
+                getWorld().addObject(new ExplanationText("Incorrect Answer",this.card),245,205);
             }
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
             getWorld().removeObjects(getWorld().getObjects(Question.class));
