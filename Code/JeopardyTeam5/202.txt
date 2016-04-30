@@ -13,253 +13,195 @@
 
 :CAT1:Scrum
 
-:QUEST1:100:When you want to work with an image, use this class.
-:ANSWER1:T:GreenfootImage
-:ANSWER1:F:Actor
-:ANSWER1:F:Greenfoot
-:ANSWER1:F:World
-:ANSWERORDER1:randomized
-:EXPLANATION1:When you look at the Greenfoot documentation, you see that GreenfootImage is an image for an Actor or World to display.
+:QUEST1:100:Which one of the following is not a Scrum role?
+:ANSWER1:T:Product Manager
+:ANSWER1:F:Product Owner
+:ANSWER1:F:ScrumMaster
+:ANSWER1:F:Team	
 
-:QUEST2:200:All of this is the stage on which your objects act.
-:ANSWER2:T:World
-:ANSWER2:F:Actor
-:ANSWER2:F:Greenfoot
-:ANSWER2:F:Stage
-:ANSWERORDER2:randomized
-:EXPLANATION2:When you look at the Greenfoot documentation, you see that World is the world in which Actors live.
+:QUEST2:200:Which one of the following is not a Scrum Artifact?
+:ANSWER2:T:Story
+:ANSWER2:F:Item
+:ANSWER2:F:Sprint Backlog
+:ANSWER2:F:Product Backlog
 
-:QUEST3:300:You can play your music with this class.
-:ANSWER3:T:Greenfoot
-:ANSWER3:F:Actor
-:ANSWER3:F:SoundPlayer
-:ANSWER3:F:World
-:ANSWERORDER3:randomized
-:EXPLANATION3:When you look at the Greenfoot documentation, you see that Greenfoot is a utility class. One of its methods is playSound(), which plays a sound from a file.
+:QUEST3:300:What is the duration of a sprint in Scrum?
+:ANSWER3:T:30 days
+:ANSWER3:F:Sprint review meeting
+:ANSWER3:F:Sprint planning meeting
+:ANSWER3:F:Sprint retrospective meeting
 
-:QUEST4:400:Almost every program you write includes subclasses of these two classes.
-:ANSWER4:T:Actor and World
-:ANSWER4:F:Actor and Greenfoot
-:ANSWER4:F:GreenfootImage and GreenfootSound
-:ANSWER4:F:World and Greenfoot
-:ANSWERORDER4:randomized
-:EXPLANATION4:Every scenario in Greenfoot subclasses World and Actor.
+:QUEST4:400:Which of the following meetings is not part of Scrum?
+:ANSWER4:T:Product review meeting
+:ANSWER4:F:Sprint review meeting
+:ANSWER4:F:Sprint planning meeting
+:ANSWER4:F:Sprint retrospective meeting
 
-:QUEST5:500:Objects of this class live within objects of another class and usually contains objects of still other classes.
-:ANSWER5:T:Actor
-:ANSWER5:F:Greenfoot
-:ANSWER5:F:String
-:ANSWER5:F:World
-:ANSWERORDER5:randomized
-:EXPLANATION5:An Actor lives within a World subclass and often contains other objects such as GreenfootImage or String.
+:QUEST5:500:What can be changed in a sprint?
+:ANSWER5:T:Nothing
+:ANSWER5:F:End date
+:ANSWER5:F:The prioritizing
+:ANSWER5:F:Items
+
 
 :CAT2:Agile
 
-:QUEST6:100:When you want to store whole numbers in a computer's main memory, use this data type.
-:ANSWER6:T:int
-:ANSWER6:F:String
-:ANSWER6:F:double
-:ANSWER6:F:char
-:ANSWERORDER6:randomized
-:EXPLANATION6:The data type of a variable defines the kind of data to store in a computer's main memory. The "int" data type stores integers, which are numbers without a decimal point.
+:QUEST6:100:According to the manifesto, communications are best managed through:
+:ANSWER6:T:Face to face communications
+:ANSWER6:F:Daily Stand Up meetings
+:ANSWER6:F:Retrospectives
+:ANSWER6:F:Demonstrations
 
-:QUEST7:200:When you want to store sequences of characters, like "Hello World", use this data type.
-:ANSWER7:T:String
-:ANSWER7:F:string
-:ANSWER7:F:str
-:ANSWER7:F:text
-:ANSWERORDER7:randomized
-:EXPLANATION7:Sequences of characters are known as strings. The string data type in Java is "String".
+:QUEST7:200:“Velocity” is a measure of:
+:ANSWER7:T:Project progress
+:ANSWER7:F:Customer buy-in
+:ANSWER7:F:Executive support
+:ANSWER7:F:Risk mitigation
 
-:QUEST8:300:Of 3, 4 or 5, these are all this data type.
-:ANSWER8:T:int
-:ANSWER8:F:String
-:ANSWER8:F:double
-:ANSWER8:F:char
-:ANSWERORDER8:randomized
-:EXPLANATION8:The numbers 3, 4 and 5 are all integer numbers. An integer is zero or any positive or negative number without a decimal point. The data type for integers is "int".
+:QUEST8:300:Which of the following traits need to exist among the members of an agile software team?
+:ANSWER8:F:Competence
+:ANSWER8:F:Decision-making ability
+:ANSWER8:F:Mutual trust and respect
+:ANSWER8:T:All of the above
 
-:QUEST9:400:The literal "9" (with quote marks) is of this data type.
-:ANSWER9:T:String
-:ANSWER9:F:int
-:ANSWER9:F:double
-:ANSWER9:F:char
-:ANSWERORDER9:randomized
-:EXPLANATION9:Sequences of characters inside double quotes are strings. Even though the characters look like numbers the quote marks around the numbers make them a string. Even though the string contains numbers, the double quote marks make this a string. In Java, the data type for a string is "String".
+:QUEST9:400:What are the four framework activities found in the Extreme Programming (XP) process model?
+:ANSWER9:F:analysis,design,coding,testing
+:ANSWER9:F:planning,analysis,design,coding
+:ANSWER9:F:planning,analysis,coding,testing
+:ANSWER9:T:planning,design,coding,testing
 
-:QUEST10:500:You cannot store the digits of Pi, which is approximately 3.14159, with this numerical data type.
-:ANSWER10:T:int
-:ANSWER10:F:String
-:ANSWER10:F:double
-:ANSWER10:F:float
+:QUEST10:500:Agile Modeling (AM) provides guidance to practitioner during which of these software tasks?
+:ANSWER10:F:Analysis
+:ANSWER10:F:Design
+:ANSWER10:F:Coding
+:ANSWER10:T:Analysis & Design
 :ANSWERORDER10:randomized
-:EXPLANATION10:Pi is approximately 3.14159, which is a number with a decimal point. The "int" data type cannot store numbers with decimal points. Strings can store the digits making up Pi, even though your program cannot perform arithmetic on the number. Both double and float can store Pi as a number though double has more accuracy that float. Thus the best question is, "What is int"?
 
 :CAT3:XP
 
-:QUEST11:100:These 2 coordinates are used to locate a point in a 2-dimensional Cartesian, or coordinate, system.
-:ANSWER11:T:x & y
-:ANSWER11:F:up & down
-:ANSWER11:F:latitude & longitude
-:ANSWER11:F:radius & theta (\u0398)
-:ANSWERORDER11:randomized
-:EXPLANATION11:A Cartesian coordinate system specifies each point in a plane using the numerical coordinates x & y.
+:QUEST11:100:Which planning cycle is part of XP 'Practices'
+:ANSWER11:T:Quarterly
+:ANSWER11:F:Monthly
+:ANSWER11:F:Yearly
+:ANSWER11:F:Half-Yearly
 
-:QUEST12:200:The  origin (0, 0) of the coordinate system is located at this area of a Greenfoot window.
-:ANSWER12:T:the upper left-hand corner
-:ANSWER12:F:in the center
-:ANSWER12:F:the upper right-hand corner
-:ANSWER12:F:the lower left-hand corner
-:ANSWERORDER12:randomized
-:EXPLANATION12:The upper left-hand corner is the origin (0, 0) of the Greenfoot coordinate system.
+:QUEST12:200:According to one of the 'Practice' in XP - System should be built and all of the tests should be finished within ___
+:ANSWER12:F:5 minute
+:ANSWER12:T:10 minute
+:ANSWER12:F:15 minute
+:ANSWER12:F:30 minute
 
-:QUEST13:300:To move to a specific (x, y) location, use this method of the Actor class.
-:ANSWER13:T:setLocation()
-:ANSWER13:F:location()
-:ANSWER13:F:setXY()
-:ANSWER13:F:setX_Y()
-:ANSWERORDER13:randomized
-:EXPLANATION13:The setLocation() method of the Actor class assigns a new location for an Actor object. The location is specified as a cell index in the world.
+:QUEST13:300:Which of the following is the right activity sequence for XP?
+:ANSWER13:T:Write test,write code,refactor
+:ANSWER13:F:Write code,refactor,write test
+:ANSWER13:F:Write code,write test,refactor
+:ANSWER13:F:Design,write code,Write test
 
-:QUEST14:400:To find the current (x, y) coordinate location of an Actor, use these two methods.
-:ANSWER14:T:getX() and getY()
-:ANSWER14:F:x() and y()
-:ANSWER14:F:getXCoordinate() and getYCoordinate()
-:ANSWER14:F:setX() and setY()
-:ANSWERORDER14:randomized
-:EXPLANATION14:Method getX() returns the x-coordinate of the object's current location and method getY() returns the y-coordinate of the object's current location.
+:QUEST14:400:What is the frequency of Integration suggested by the XP?
+:ANSWER14:T:More often than daily
+:ANSWER14:F:Daily
+:ANSWER14:F:Weekly
+:ANSWER14:F:Alternate Day
 
-:QUEST15:500:To move an Actor one pixel to the right use this statement.
-:ANSWER15:T:setLocation(getX() + 1, getY());
-:ANSWER15:F:setLocation(getX() + 10, getY() - 1);
-:ANSWER15:F:setLocation(getX() + 1, getY() - 1);
-:ANSWER15:F:setLocation(getX(), getY() + 1);
-:ANSWERORDER15:randomized
-:EXPLANATION15:These statements should be worked from the inside out. Method getX() returns the x-coordinate of the object's current location. By adding 1, you move the location one pixel to the right. Method getY() returns the y-coordinate of the object's current location. With the (x, y) locations computed, calling the setLocation() method will move an Actor one pixel to the right.
+:QUEST15:500:Which Practice prescribe "the code is always written by two programmers at one machine"
+:ANSWER15:T:Pair Programming
+:ANSWER15:F:Twin Programming
+:ANSWER15:F:Peer Programming
+:ANSWER15:F:Buddy Programming
 
-:CAT4:GoF
+:CAT4:DesignPattern-1
 
-:QUEST16:100:It's the sum total of the degrees in a circle.
-:ANSWER16:T:360
-:ANSWER16:F:180
-:ANSWER16:F:2\u00B7\u03C0\u00B7r
-:ANSWER16:F:\u03C0\u00B7r\u00B2
-:ANSWERORDER16:randomized
-:EXPLANATION16:There are 360 degrees in a circle.
+:QUEST16:100:Which of the following pattern is used when creation of object directly is costly?
+:ANSWER16:T:Bridge Pattern
+:ANSWER16:F:Adapter Pattern
+:ANSWER16:F:Prototype Pattern
+:ANSWER16:F:Filter Pattern
 
-:QUEST17:200:For an Actor, zero degrees is in this direction of the compass.
-:ANSWER17:F:to the north
-:ANSWER17:T:to the east
-:ANSWER17:F:to the south
-:ANSWER17:F:to the west
-#:ANSWERORDER17:randomized
-:EXPLANATION17:Zero degrees is to the east and the angle of the circle increases clockwise.
+:QUEST17:200:Which of the following pattern is primarily used to reduce the number of objects created and to decrease memory footprint and increase performance?
+:ANSWER17:F:Composite Pattern
+:ANSWER17:F:Facade Pattern
+:ANSWER17:F:Decorator Pattern
+:ANSWER17:T:Flyweight Pattern
 
-:QUEST18:300:To find the current orientation (or heading) of an actor, use this method of the Actor class.
-:ANSWER18:T:getRotation()
-:ANSWER18:F:getOrientation()
-:ANSWER18:F:getHeading()
-:ANSWER18:F:getDirection()
-:ANSWERORDER18:randomized
-:EXPLANATION18:The getRotation() method of the Actor class returns the current rotation of the object. Rotation is a degree value in the range of (0..359). Zero degrees is to the east and the angle increases clockwise.
+:QUEST18:300:In which of the following pattern, a class behavior changes based on its state?
+:ANSWER18:T:State Pattern
+:ANSWER18:F:Strategy Pattern
+:ANSWER18:F:Singleton Pattern
+:ANSWER18:F:Template Pattern
 
-:QUEST19:400:To turn an actor facing straight up (or north), use this command.
-:ANSWER19:T:setRotation(270)
-:ANSWER19:F:setRotation(0)
-:ANSWER19:F:setRotation("north")
-:ANSWER19:F:setRotation("up")
-:ANSWERORDER19:randomized
-:EXPLANATION19:Zero degrees is to the east and the angle of the circle increases clockwise. Straight up, or north, is at 270 degrees. Use the setRotation() method to set the orientation (or heading) of an Actor.
+:QUEST19:400:Which of the following pattern is used to separate application's concerns?
+:ANSWER19:T:MVC Pattern
+:ANSWER19:F:Visitor Pattern
+:ANSWER19:F:Business Delegate Pattern
+:ANSWER19:F:Composite Pattern
 
-:QUEST20:500:To turn an actor 10 degress clockwise from their current heading, use this command.
-:ANSWER20:T:turn(10)
-:ANSWER20:F:turn(-10)
-:ANSWER20:F:setRotation(+10)
-:ANSWER20:F:setRotation(-10)
-:ANSWERORDER20:randomized
-:EXPLANATION20:Zero degrees is to the east and the angle of the circle increases clockwise. Straight up, or north, is at 270 degrees. To turn clockwise use a positive number.
+:QUEST20:500:Which type of design patterns concern class and object composition?
+:ANSWER20:F:Creational Design Patterns
+:ANSWER20:T:Structural Design Patterns
+:ANSWER20:F:Behavioral Design Patterns
+:ANSWER20:F:J2EE Design Patterns
 
-:CAT5:Lean
+:CAT5:DesignPattern-2
 
-:QUEST21:100:It is a numerical sequence where the next number cannot be predicted.
-:ANSWER21:T:a random number
-:ANSWER21:F:a sequential number
-:ANSWER21:F:an ordered number
-:ANSWER21:F:a psudeo number
-:ANSWERORDER21:randomized
-:EXPLANATION21:Random numbers are a series of numbers that lack any pattern and thus appear random. Most times, a random number generator will produce psuedorandom sequences, where numbers appear to be random but are not. Psuedorandom numbers are often sufficient for computer programs, like video games, that need random numbers.
+:QUEST21:100:Defines an interface for creating an object, but let the subclasses decide which class to instantiate.It let the instantiation differ to subclasses.
+:ANSWER21:T:Factory Method
+:ANSWER21:F:Abstract Factory
+:ANSWER21:F:Builder
+:ANSWER21:F:Prototype
 
-:QUEST22:200:This method of solving problems with a random number generator is named after the casino city of Monaco.
-:ANSWER22:T:Monte Carlo
-:ANSWER22:F:Las Vegas
-:ANSWER22:F:Macau
-:ANSWER22:F:Venise
-:ANSWERORDER22:randomized
-:EXPLANATION22:Monte Carlo is a city widely known for its casino. Monte Carlo methods rely on repeated computation of random or pseudorandom numbers.
+:QUEST22:200:Attach additional responsibilities to an object dynamically.It provides a flexible alternative to subclassing for extending functionality.
+:ANSWER22:T:Decorator
+:ANSWER22:F:Chain of responsibility
+:ANSWER22:F:Adapter
+:ANSWER22:F:Composite
 
-:QUEST23:300:This expression will return a random number between 0 and 10, including the numbers 0 and 10.
-:ANSWER23:F:Greenfoot.getRandomNumber(9)
-:ANSWER23:F:Greenfoot.getRandomNumber(10)
-:ANSWER23:T:Greenfoot.getRandomNumber(11)
-:ANSWER23:F:Greenfoot.getRandomNumber("10")
-#:ANSWERORDER23:randomized
-:EXPLANATION23:The Greenfoot method getRandomNumber() returns a random number between 0 (inclusive) and an upper limit (exclusive). Since the upper limit is excluded you must add one to the parameter to include the upper limit.
+:QUEST23:300:Define a family of algorithms, encapsulate each one, and make them interchangeable. It lets the algorithm vary independently from clients that use it.
+:ANSWER23:T:Strategy
+:ANSWER23:F:Template method
+:ANSWER23:F:Decorator
+:ANSWER23:F:Visitor
 
-:QUEST24:400:This expression will produce a random number between -45 and +45.
-:ANSWER24:T:Greenfoot.getRandomNumber(91) - 45
-:ANSWER24:F:Greenfoot.getRandomNumber(45, -45)
-:ANSWER24:F:Greenfoot.getRandomNumber(-90) + 45
-:ANSWER24:F:Greenfoot.getRandomNumber(-45, 45)
-:ANSWERORDER24:randomized
-:EXPLANATION24:The Greenfoot method getRandomNumber() returns a random number between 0 (inclusive) and an upper limit (exclusive). Thus the method Greenfoot.getRandomNumber(91) returns a random number between 0 and 90. By subtracting 45, the number shifts to between -45 and +45.
+:QUEST24:400:Define one to many dependency between objects so that when one object change state, all its dependent are notified and updated automatically.
+:ANSWER24:F:Chain of responsibility
+:ANSWER24:F:Mediator
+:ANSWER24:F:Memento
+:ANSWER24:T:Observer
 
-:QUEST25:500:Use this test condition in an if-statement to randomly decide whether to turn 10% of the time.
-:ANSWER25:T:Greenfoot.getRandomNumber(100) < 10
-:ANSWER25:F:Greenfoot.getRandomNumber(10) < 100
-:ANSWER25:F:turn(Greenfoot.getRandomNumber(-90))
-:ANSWER25:F:turn("random") * 10%
-:ANSWERORDER25:randomized
-:EXPLANATION25:The expression "Greenfoot.getRandomNumber(100)" returns a random number between 0 and 99. By testing if the number is < 10, there is a 10% chance of turning when using code like:\n\nif (Greenfoot.getRandomNumber(100) < 10) {\n    // turn statement...\n}
+:QUEST25:500:Encapsulate a request as an object, there by letting you parametrize clients with different requests, queue or log requests, and support undoable operation.
+:ANSWER25:F:Adapter
+:ANSWER25:F:Decorator
+:ANSWER25:T:Command
+:ANSWER25:F:Composite
 
-:CAT6:Kanban
+:CAT6:Mixed
 
-:QUEST26:100:This test condition says that, "x is positive".
-:ANSWER26:T:x > 0
-:ANSWER26:F:0 > x
-:ANSWER26:F:x < 0
-:ANSWER26:F:x >= 0
-:ANSWERORDER26:randomized
-:EXPLANATION26:A positive number is a number greater than zero. The relational operator > means "greater than". So the expression (x > 0) means, "x is positive".
+:QUEST26:100:Ensure a class has only one instance, and provide a global access point to it.
+:ANSWER26:T:Singleton
+:ANSWER26:F:Proxy
+:ANSWER26:F:Flyweight
+:ANSWER26:F:Facade
 
-:QUEST27:200:This test condition says that, "x is negative".
-:ANSWER27:T:x < 0
-:ANSWER27:F:x > 0
-:ANSWER27:F:0 > x
-:ANSWER27:F:x >= 0
-:ANSWERORDER27:randomized
-:EXPLANATION27:A negative number is a number less than zero. The relational operator < means "less than". So the expression (x < 0) means, "x is negative".
+:QUEST27:200:Scrum is a very lean process with only _ roles _ mandatory artifacts and _ mandatory meetings apart from daily scrum meeting in a sprint.
+:ANSWER27:F:4,3,4
+:ANSWER27:F:3,4,5
+:ANSWER27:F:4,4,4
+:ANSWER27:T:3,3,3
 
-:QUEST28:300:This test condition says that, "x is zero".
-:ANSWER28:T:x == 0
-:ANSWER28:F:x = 0
-:ANSWER28:F:0 = x
-:ANSWER28:F:x is 0
-:ANSWERORDER28:randomized
-:EXPLANATION28:The equality operator is "==" (two equal signs). So the expression (x == 0) means, "x is zero".
+:QUEST28:300:Which one of the following is a popular certification associated with Scrum?
+:ANSWER28:T:Certified ScrumMaster
+:ANSWER28:F:Certified ScrumManager
+:ANSWER28:F:Certified Scrum Trainer
+:ANSWER28:F:Scrum Certified
 
-:QUEST29:400:This test condition says that, "x is not equal to y".
-:ANSWER29:T:x != y
-:ANSWER29:F:x <> y
-:ANSWER29:F:x =! y
-:ANSWER29:F:x \u2260 y
-:ANSWERORDER29:randomized
-:EXPLANATION29:The algebra symbol \u2260 is not easy to make on a standard keyboard. Thus two symbols are used for inequality: "!=". Code the symbols in the order people normally say them.
+:QUEST29:400:Which of the following are lean implementation requirements?
+:ANSWER29:T:Preventive maintenance
+:ANSWER29:F:Vertically integrated facilities
+:ANSWER29:F:Clarification of process flows
+:ANSWER29:F:Upgrade quality
 
-:QUEST30:500:This test condition says that, "x is greater than y + 1".
-:ANSWER30:T:x > y + 1
-:ANSWER30:F:x + y = 1
-:ANSWER30:F:x < y + 1
-:ANSWER30:F:x + 1 > y
-:ANSWERORDER30:randomized
-:EXPLANATION30:Each operand (side of the operator) can be an arithmetic expression. The arithmetic is preformed before the comparison is made.
+:QUEST30:500:Provide an unified interface to a set of interfaces in a subsystem.It define a higher level interface that makes the subsystem easier to use.
+:ANSWER30:T:Facade
+:ANSWER30:F:Mediator
+:ANSWER30:F:Adapter
+:ANSWER30:F:Strategy
 
