@@ -17,7 +17,7 @@ public class MainScreen extends Actor
     {
         if(Greenfoot.mouseClicked(this)){
             getWorld().removeObjects(getWorld().getObjects(TextFieldForMainScreen.class));
-            getWorld().addObject(new TextFieldForMainScreen("Please select category to proceed",Color.BLUE),302,294);
+            getWorld().addObject(new TextFieldForMainScreen("Please select category to proceed",Color.BLUE),414,294);
             MainTopicComposite Category202 = new MainTopicComposite("202");
             MainTopicComposite Category272 = new MainTopicComposite("272");
             MainTopicComposite Category273 = new MainTopicComposite("273");
