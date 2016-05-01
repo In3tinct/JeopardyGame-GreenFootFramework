@@ -15,9 +15,9 @@ public class ClosedCard202 extends QuestionCardLeaf202 implements ICardState {
         } else if(x==256) {
             cats="XP";
         } else if(x==349) {
-             cats="DesignPattern-1";
+             cats="Patterns-1";
         } else if(x==443) {
-             cats="DesignPattern-2";
+             cats="Patterns-2";
         } else if(x==537) {
              cats="Mixed";
         }
