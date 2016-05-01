@@ -20,6 +20,7 @@ public class MyWorld extends World
     ICardComponent currentCard;
     boolean answerClicked=false;
     ChallengeQuestion[] questions;
+    int finalScore=0;
     
     public void setCurrentCard(ICardComponent card){
        this.currentCard = card;
@@ -82,6 +83,14 @@ public class MyWorld extends World
     }
      public void setQuestions(ChallengeQuestion[] ques) {
         questions=ques;
+    }
+    
+    public void setScore(int score) {
+        finalScore=score;
+    }
+    
+    public int getScore() {
+        return finalScore;
     }
 
     /**
