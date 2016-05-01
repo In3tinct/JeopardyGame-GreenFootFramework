@@ -161,6 +161,7 @@ public class MainTopicComposite extends Actor implements ICardComponent
     void addQCardToWorld(ICardComponent ques, int x, int y){
         Actor q = (Actor)ques;
         getWorld().addObject(q, xcoords[x], ycoords[y]);
+        
         getWorld().addObject(new TextFieldForMainScreen(categories[0],Color.WHITE,22),66,50);
             getWorld().addObject(new TextFieldForMainScreen(categories[1],Color.WHITE,22),158,50);
             getWorld().addObject(new TextFieldForMainScreen(categories[2],Color.WHITE,22),256,50);
