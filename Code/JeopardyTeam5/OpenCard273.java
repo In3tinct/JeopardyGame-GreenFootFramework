@@ -21,7 +21,6 @@ public class OpenCard273  extends QuestionCardLeaf273 implements ICardState {
 
     @Override
     public void resetCard() {
-        System.out.println("Reset Open Card");
         setCardState(new ClosedCard273());
     }
 
