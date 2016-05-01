@@ -6,7 +6,7 @@ import java.awt.Color;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class QuestionCardLeaf202 extends Actor implements ICardComponent
+public class QuestionCardLeaf207 extends Actor implements ICardComponent
 {
     ICardState cardOpen ;
     ICardState cardDisabled;
@@ -17,13 +17,13 @@ public class QuestionCardLeaf202 extends Actor implements ICardComponent
     String typeOfTopic;
     String score;
        
-    public QuestionCardLeaf202(){
+    public QuestionCardLeaf207(){
        }
-    public QuestionCardLeaf202(String typeOfTopic,String text){
+    public QuestionCardLeaf207(String typeOfTopic,String text){
         //this.cardValue= parseInt(text);
         GreenfootImage g = new GreenfootImage(text, 30, Color.YELLOW , null);
         setImage(g);
-        cardClosed = new ClosedCard202();
+        cardClosed = new ClosedCard207();
         this.cardState=cardClosed;
         this.typeOfTopic = typeOfTopic;
         this.score = text;
@@ -43,7 +43,7 @@ public class QuestionCardLeaf202 extends Actor implements ICardComponent
       //  ICardComponent ic=this.cardState.displayQCard((MyWorld)getWorld(),this.cardState,card);
         openQuestion.execute((MyWorld)getWorld(),this.cardState,card,typeOfTopic,score,this.getX());
     }
-   public void timeOutCard(MyWorld world,ICardComponent card){
+    public void timeOutCard(MyWorld world,ICardComponent card){
        this.cardState.timeOutCard(world,card);
     }
     
