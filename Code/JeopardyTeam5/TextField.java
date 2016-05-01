@@ -2,19 +2,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
 //import java.awt.*;
 import java.awt.event.*;
+import java.util.*;
 /**
  * Write a description of class TextField here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class TextField extends Actor
+public class TextField extends Actor implements Subject
 {
     GreenfootImage g;
     String ans = "";
     Color color;
     ICardComponent card;
     boolean isCorrect;
+    private ArrayList<Observer> observers;
+    private int points;
     /*public TextField(String text,ICardComponent card) {
         ans = text;
         g = new GreenfootImage(text, 30, Color.YELLOW , null);
@@ -23,12 +26,22 @@ public class TextField extends Actor
         this.card =card;
     }*/
     
+    public TextField(String text,ICardComponent card,boolean isCorrect,int points) {
+        ans = text;
+        color = Color.WHITE;
+        wordWrap(ans,color);
+        this.card =card;
+        this.isCorrect=isCorrect;
+        this.points=points;
+    }
+    
     public TextField(String text,ICardComponent card,boolean isCorrect) {
         ans = text;
         color = Color.WHITE;
         wordWrap(ans,color);
         this.card =card;
         this.isCorrect=isCorrect;
+        this.points=points;
     }
     
     /**
@@ -65,12 +78,18 @@ public class TextField extends Actor
             }else if(this.card instanceof QuestionCardLeaf202){
                 getWorld().addObject(new ResultScreen202(this.card),100,100);
             }
+            observers=new ArrayList<Observer>();
+            attach(new CountScore(((MyWorld)getWorld())));
             if(this.isCorrect==true)
             {
+                notifyObserver(points);
             getWorld().addObject(new ExplanationText("Correct Answer",this.card),245,205);
+            
             }
             else
             {
+                int a=0-points;
+                notifyObserver(a);
                 getWorld().addObject(new ExplanationText("Incorrect Answer",this.card),245,205);
             }
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
@@ -92,10 +111,26 @@ public class TextField extends Actor
          GreenfootImage image = new GreenfootImage(width, height*lines.length); // final image
           for (int i=0; i<lines.length; i++)
               { // draw each line image on final image
-	          GreenfootImage line = new GreenfootImage(lines[i], size, colorvalue, null);
+              GreenfootImage line = new GreenfootImage(lines[i], size, colorvalue, null);
               image.drawImage(line, 200, i*height);    
               }
               setImage(image);        
       }
     
+      public void attach(Observer obj){
+        observers.add(obj);
+        }        
+
+
+      public void detach(Observer obj){
+        int index=observers.indexOf(obj);
+        observers.remove(index);
+        }
+
+      public void notifyObserver(int point){
+        for(Observer observer : observers)
+        {
+            observer.update(point);
+        }
+        }
 }
