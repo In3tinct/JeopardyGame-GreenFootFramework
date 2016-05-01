@@ -33,6 +33,10 @@ public class RoundOverText extends Actor
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)){
+            if(getWorld().getObjects(QuestionCardLeaf202.class).toArray().length == 0 || getWorld().getObjects(QuestionCardLeaf273.class).toArray().length == 0 || getWorld().getObjects(QuestionCardLeaf272.class).toArray().length == 0 || getWorld().getObjects(QuestionCardLeaf207.class).toArray().length == 0 ) {
+                getWorld().removeObjects(getWorld().getObjects(TextFieldForMainScreen.class));
+                getWorld().addObject(new TextFieldForMainScreen("Please select category to proceed",Color.BLUE),414,294);
+            }
             getWorld().removeObjects(getWorld().getObjects(GameScreen.class));
              getWorld().removeObjects(getWorld().getObjects(RoundOverText.class));
         }
