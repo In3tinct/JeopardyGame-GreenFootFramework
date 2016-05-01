@@ -5,24 +5,13 @@ import java.awt.event.*;
 
 public class PrintScore extends Actor 
 {
-   // String final_score;
-   String value;
-   //ScoreKeeper c;
-      public PrintScore(String text)
+    public PrintScore(int text)
     {
-         
-      /* if(text=="0")
-       print(text);
-       else{
-           c=new ScoreKeeper(text);
-           value=c.check1();
-           print(value);
-        }
-    }
-    public void print(String text){*/
-         GreenfootImage g = new GreenfootImage(text, 18, Color.WHITE , null);
+        //getWorld().removeObject(this);
+        //System.out.println(text);
+        GreenfootImage g = new GreenfootImage(String.valueOf(text), 18, Color.WHITE , null);
        setImage(g);
-        
+       
     }
     public void act()
     {
