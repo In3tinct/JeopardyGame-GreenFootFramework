@@ -13,8 +13,15 @@ public class MainScreen extends Actor
      * Act - do whatever the MainScreen wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    boolean soundHasPlayed=false;
     public void act() 
     {
+        if (!soundHasPlayed)
+    {
+        Greenfoot.playSound("202.mp3");
+        soundHasPlayed = true;  //This will cause this if block never to run again, unless you have code somewhere that turns it to false again.
+    }
+        
         if(Greenfoot.mouseClicked(this)){
             getWorld().removeObjects(getWorld().getObjects(TextFieldForMainScreen.class));
             getWorld().addObject(new TextFieldForMainScreen("Please select category to proceed",Color.BLUE),414,294);
