@@ -7,13 +7,18 @@ public class ClosedCard207 extends QuestionCardLeaf207 implements ICardState {
         world.setCurrentCard(card);
         ChallengeQuestion[] q=world.getQuestions();
         world.addObject(new QuestionScreen(),100,100);
-        if(x==66)
-        {
-          cats="GREENFOOT: THE CLASS";
-        }
-        else if(x==158)
-        {
-            cats="RAW DATA";
+        if(x==66) {
+            cats="Basics";
+        } else if(x==158) {
+            cats="RawData";
+        } else if(x==256) {
+            cats="Datagram";
+        } else if(x==349) {
+             cats="Java";
+        } else if(x==443) {
+             cats="Http";
+        } else if(x==537) {
+             cats="Network";
         }
         for(int i=0;i<q.length;i++)
         {
