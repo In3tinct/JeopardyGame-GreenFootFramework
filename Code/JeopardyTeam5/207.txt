@@ -11,7 +11,7 @@
 # Explanation format = :EXPLANATIONX:Explanation text, where X is the question
 #     number. Note that you can force new lines using \n.
 
-:CAT1:Surprises
+:CAT1:Basics
 
 :QUEST1:100:Networking Classes are included in.
 :ANSWER1:F:Java.IO.*
@@ -53,7 +53,7 @@
 :ANSWERORDER5:randomized
 :EXPLANATION5:An Actor lives within a World subclass and often contains other objects such as GreenfootImage or String.
 
-:CAT2:RAW DATA
+:CAT2:RawData
 
 :QUEST6:100:Port Numbers are represented by.
 :ANSWER6:F:8 bits
@@ -95,7 +95,7 @@
 :ANSWERORDER10:randomized
 :EXPLANATION10:Pi is approximately 3.14159, which is a number with a decimal point. The "int" data type cannot store numbers with decimal points. Strings can store the digits making up Pi, even though your program cannot perform arithmetic on the number. Both double and float can store Pi as a number though double has more accuracy that float. Thus the best question is, "What is int"?
 
-:CAT3:NETWORKING, DATAGRAMS
+:CAT3:Datagrams
 
 :QUEST11:100:Which of these is a bundle of information passed between machines?.
 :ANSWER11:F:Mime
@@ -137,7 +137,7 @@
 :ANSWERORDER15:randomized
 :EXPLANATION15:These statements should be worked from the inside out. Method getX() returns the x-coordinate of the object's current location. By adding 1, you move the location one pixel to the right. Method getY() returns the y-coordinate of the object's current location. With the (x, y) locations computed, calling the setLocation() method will move an Actor one pixel to the right.
 
-:CAT4:Java networking
+:CAT4:Java
 
 :QUEST16:100:Which of these interface abstractes the output of messages from httpd.
 :ANSWER16:T:LogMessage
@@ -179,7 +179,7 @@
 :ANSWERORDER20:randomized
 :EXPLANATION20:Zero degrees is to the east and the angle of the circle increases clockwise. Straight up, or north, is at 270 degrees. To turn clockwise use a positive number.
 
-:CAT5:Networking-httpd.java Class
+:CAT5:Http
 
 :QUEST21:100:Which of these methods of httpd class is used to read data from the stream.
 :ANSWER21:F:getDta()
@@ -221,7 +221,7 @@
 :ANSWERORDER25:randomized
 :EXPLANATION25:The expression "Greenfoot.getRandomNumber(100)" returns a random number between 0 and 99. By testing if the number is < 10, there is a 10% chance of turning when using code like:\n\nif (Greenfoot.getRandomNumber(100) < 10) {\n    // turn statement...\n}
 
-:CAT6:Networking basics
+:CAT6:Network
 
 :QUEST26:100:Which of these is a protocol for breaking and sending packets to an address across a network.
 :ANSWER26:F:TCIP/IP
