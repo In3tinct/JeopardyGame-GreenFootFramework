@@ -38,9 +38,7 @@ public class MainTopicComposite extends Actor implements ICardComponent
     private int numQuestions;
     private static final int MAX_QUESTS=30;
     private static final int MAX_CATS = 6;
-     String scores="0";
-     ScoreKeeper scoring;
-     //CountScore obj=new CountScore(scores);
+    
     public MainTopicComposite(String text){
         if(text=="202"){
             setImage("202.JPG");
@@ -64,6 +62,7 @@ public class MainTopicComposite extends Actor implements ICardComponent
             questions=new ChallengeQuestion[MAX_QUESTS];
             //Removing the first screen object
             //getWorld().removeObjects(getWorld().getObjects(MainScreen.class));
+            //Greenfoot.playSound("202.mp3");
             getWorld().addObject(new GameScreen(),300,225);
             try{
                if(this.getName()=="273"){
@@ -94,9 +93,6 @@ public class MainTopicComposite extends Actor implements ICardComponent
             createAllQCards(this.getName());
             addAllQCardsToWorld();
             getWorld().addObject(new Score("Score: "),230,446);
-            scoring=new ScoreKeeper(scores);
-            scores=scoring.view();
-            getWorld().addObject(new PrintScore(scores),268,444);
         }catch(IOException ioe){
             }
         }
@@ -112,23 +108,23 @@ public class MainTopicComposite extends Actor implements ICardComponent
       Iterator<ICardComponent> itr = questionCards.iterator();
        if(questionCards.size()>0){
         while (itr.hasNext()) {
-		    ICardComponent card=itr.next();
-			if(card instanceof QuestionCardLeaf273){
-			    ICardState state = ((QuestionCardLeaf273)card).getCardState();
-			    if(!(state instanceof DisabledCard273))
-			     return false;
+            ICardComponent card=itr.next();
+            if(card instanceof QuestionCardLeaf273){
+                ICardState state = ((QuestionCardLeaf273)card).getCardState();
+                if(!(state instanceof DisabledCard273))
+                 return false;
             }else if(card instanceof QuestionCardLeaf272){
-			    ICardState state = ((QuestionCardLeaf272)card).getCardState();
-			    if(!(state instanceof DisabledCard272))
-			     return false;
+                ICardState state = ((QuestionCardLeaf272)card).getCardState();
+                if(!(state instanceof DisabledCard272))
+                 return false;
             }else if(card instanceof QuestionCardLeaf202){
-			    ICardState state = ((QuestionCardLeaf202)card).getCardState();
-			    if(!(state instanceof DisabledCard202))
-			     return false;
+                ICardState state = ((QuestionCardLeaf202)card).getCardState();
+                if(!(state instanceof DisabledCard202))
+                 return false;
             }else if(card instanceof QuestionCardLeaf207){
-			    ICardState state = ((QuestionCardLeaf207)card).getCardState();
-			    if(!(state instanceof DisabledCard207))
-			     return false;
+                ICardState state = ((QuestionCardLeaf207)card).getCardState();
+                if(!(state instanceof DisabledCard207))
+                 return false;
             }
            }
         }
@@ -136,7 +132,7 @@ public class MainTopicComposite extends Actor implements ICardComponent
            return false;
         }
        
-		return true;
+        return true;
     
     }
    
@@ -165,43 +161,13 @@ public class MainTopicComposite extends Actor implements ICardComponent
     void addQCardToWorld(ICardComponent ques, int x, int y){
         Actor q = (Actor)ques;
         getWorld().addObject(q, xcoords[x], ycoords[y]);
-        if(categoryName == "272")
-        {
-            getWorld().addObject(new TextFieldForMainScreen("Cloud",Color.BLACK,22),66,50);
-            getWorld().addObject(new TextFieldForMainScreen("Linux",Color.BLACK,22),158,50);
-            getWorld().addObject(new TextFieldForMainScreen("BigData",Color.BLACK,22),256,50);
-            getWorld().addObject(new TextFieldForMainScreen("Unix",Color.BLACK,22),349,50);
-            getWorld().addObject(new TextFieldForMainScreen("Db",Color.BLACK,22),443,50);
-            getWorld().addObject(new TextFieldForMainScreen("Mixed",Color.BLACK,22),537,50);
-        }
-        else if(categoryName == "202")
-        {
-            getWorld().addObject(new TextFieldForMainScreen("Scrum",Color.BLACK,22),66,50);
-            getWorld().addObject(new TextFieldForMainScreen("Agile",Color.BLACK,22),158,50);
-            getWorld().addObject(new TextFieldForMainScreen("XP",Color.BLACK,22),256,50);
-            getWorld().addObject(new TextFieldForMainScreen("Design \n Pattern-1",Color.BLACK,20),349,49);
-            getWorld().addObject(new TextFieldForMainScreen("Design \n Pattern-2",Color.BLACK,20),443,49);
-            getWorld().addObject(new TextFieldForMainScreen("Mixed",Color.BLACK,22),537,50);
-        }
-        else if(categoryName == "273")
-        {
-            getWorld().addObject(new TextFieldForMainScreen("Node",Color.BLACK,22),66,50);
-            getWorld().addObject(new TextFieldForMainScreen("Angular",Color.BLACK,22),158,50);
-            getWorld().addObject(new TextFieldForMainScreen("JS-1",Color.BLACK,22),256,50);
-            getWorld().addObject(new TextFieldForMainScreen("JS-2",Color.BLACK,22),349,50);
-            getWorld().addObject(new TextFieldForMainScreen("MongoDb",Color.BLACK,22),443,50);
-            getWorld().addObject(new TextFieldForMainScreen("Mixed",Color.BLACK,22),537,50);
-        }
-        else if(categoryName == "207")
-        {
-            getWorld().addObject(new TextFieldForMainScreen("Scrum",Color.BLACK,22),66,50);
-            getWorld().addObject(new TextFieldForMainScreen("Agile",Color.BLACK,22),158,50);
-            getWorld().addObject(new TextFieldForMainScreen("XP",Color.BLACK,22),256,50);
-            getWorld().addObject(new TextFieldForMainScreen("GoF",Color.BLACK,22),349,50);
-            getWorld().addObject(new TextFieldForMainScreen("Lean",Color.BLACK,22),443,50);
-            getWorld().addObject(new TextFieldForMainScreen("Kanban",Color.BLACK,22),537,50);
-        }
-        
+        getWorld().addObject(new TextFieldForMainScreen(categories[0],Color.WHITE,22),66,50);
+            getWorld().addObject(new TextFieldForMainScreen(categories[1],Color.WHITE,22),158,50);
+            getWorld().addObject(new TextFieldForMainScreen(categories[2],Color.WHITE,22),256,50);
+            getWorld().addObject(new TextFieldForMainScreen(categories[3],Color.WHITE,22),349,50);
+            getWorld().addObject(new TextFieldForMainScreen(categories[4],Color.WHITE,22),443,50);
+            getWorld().addObject(new TextFieldForMainScreen(categories[5],Color.WHITE,22),537,50);
+    
     }
     
     public void addQCard(ICardComponent ques){
@@ -266,7 +232,7 @@ public class MainTopicComposite extends Actor implements ICardComponent
             m.reset(lines.get(i));
             if (m.matches()) {
                 int index = Integer.valueOf(m.group(1)) - 1;
-                System.out.println(index);
+                //System.out.println(index);
                 if (index >= MAX_CATS) {
                     System.out.println("WARNING: Category number "
                     + (index + 1) + " exceeds maximum allowed ("
