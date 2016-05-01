@@ -11,7 +11,7 @@
 # Explanation format = :EXPLANATIONX:Explanation text, where X is the question
 #     number. Note that you can force new lines using \n.
 
-:CAT1:NodeJS
+:CAT1:Node
 
 :QUEST1:100:Which of the following statement is valid to use a Node module http in a Node based application?
 :ANSWER1:F:var http = import(“http");
@@ -44,7 +44,7 @@
 :ANSWER5:F:None of the above
 
 
-:CAT2:AngularJs
+:CAT2:Angular
 
 :QUEST6:100:AngularJS directives are used in ________.
 :ANSWER6:T:View
