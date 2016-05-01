@@ -22,6 +22,7 @@ public class TextFieldForMainScreen extends Actor
        wordWrap(text,color);
     }
     public TextFieldForMainScreen(String printtext,Color colorvalue,int font) {
+        
        GreenfootImage g = new GreenfootImage(printtext, font, colorvalue , null);
         setImage(g);
     }
