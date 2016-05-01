@@ -7,54 +7,28 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CountScore extends Actor implements Subject
+public class CountScore extends Actor implements Observer
 {
     // instance variables - replace the example below with your own
-   int score;
-         int finalscore=0; 
-   String value;
-   public ArrayList<Observer> observers = new ArrayList<Observer>(); 
-   //Observer obj;
-   public CountScore(String scored){
-    score= Integer.parseInt(scored);
-    value=printScore(score);
+   int presentScore=0;
+   MyWorld w;
+   public CountScore(MyWorld world ){
+       //System.out.println(world.getScore());
+       w=world;
+       presentScore=(world.getScore());
     }
-   public void act(){
-       
-    }
-   public void attach(Observer obj)
-   {
-       //if(obj==null)throw new NullPointerException("Null Observer");
-       observers.add(obj);
-    }
-    public String check(){
-      
-        return value;
-    }
-    public String analyze(){
-    String ans = printScore(score);
-    return ans;
-    }
-    public void detach(Observer obj)
-   {
-       observers.remove(obj);
-    }
-    public void notifyObservers()
-    {
-    for(Observer obj: observers)
-    obj.update();
-    }
-    public String calculate(){
 
-      
-      finalscore+=score;
-        return String.valueOf(finalscore);
-    }    
-    public String printScore(int score){
-        String count=calculate();
-       value=count;
-        return count;
-       //getWorld().addObject(new PrintScore(count),268,444); 
+   
+        
+    public void printScore(int score){
+       w.removeObjects(w.getObjects(PrintScore.class));
+       w.addObject(new PrintScore(score),268,444); 
+    }
+    
+    public void update(int point){
+        presentScore=presentScore+point;
+        w.setScore(presentScore);
+        printScore(presentScore);
     }
     
 }
