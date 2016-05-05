@@ -84,13 +84,14 @@ public class TextField extends Actor implements Subject
             {
                 notifyObserver(points);
             getWorld().addObject(new ExplanationText("Correct Answer",this.card),245,205);
-            
+             getWorld().addObject(new Score("Score: "),230,446);
             }
             else
             {
                 int a=0-points;
                 notifyObserver(a);
                 getWorld().addObject(new ExplanationText("Incorrect Answer",this.card),245,205);
+                getWorld().addObject(new Score("Score: "),230,446);
             }
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
             getWorld().removeObjects(getWorld().getObjects(Question.class));
