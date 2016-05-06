@@ -4,4 +4,6 @@ comment1.params=obj
 comment1.target=void\ attach(Observer)
 comment2.params=obj
 comment2.target=void\ detach(Observer)
-numComments=3
+comment3.params=p
+comment3.target=void\ notifyObserver(int)
+numComments=4

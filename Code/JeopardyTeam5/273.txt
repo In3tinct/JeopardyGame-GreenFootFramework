@@ -150,11 +150,11 @@
 :ANSWER21:F:1 s
 :ANSWER21:F:100 s
 
-:QUEST22:200:Which of the following command inside aggregate command is used in MongoDB aggregation to filter the documents to pass only the documents that match the specified condition(s) to the next pipeline stage.
-:ANSWER22:F:$group
-:ANSWER22:F:$aggregate
-:ANSWER22:T:$match
-:ANSWER22:F:$sum
+:QUEST22:200:What is the default size of a GridFS chunk?.
+:ANSWER22:F:16 MB
+:ANSWER22:F:255 K
+:ANSWER22:T:1 MB
+:ANSWER22:F:2 MB
 
 :QUEST23:300:Which of the following aggregation commands in MongoDB does not support sharded collections?
 :ANSWER23:F:aggregate

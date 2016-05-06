@@ -12,7 +12,7 @@ public class ClosedCard207 extends QuestionCardLeaf207 implements ICardState {
         } else if(x==158) {
             cats="RawData";
         } else if(x==256) {
-            cats="Datagram";
+            cats="Datagrams";
         } else if(x==349) {
              cats="Java";
         } else if(x==443) {
