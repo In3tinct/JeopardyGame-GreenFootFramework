@@ -48,6 +48,7 @@ public class TextField extends Actor implements Subject
      * Act - do whatever the TextField wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    boolean soundHasPlayed=false;
     public void act()
     {
         MouseInfo mouse = Greenfoot.getMouseInfo();
@@ -82,12 +83,22 @@ public class TextField extends Actor implements Subject
             attach(new CountScore(((MyWorld)getWorld())));
             if(this.isCorrect==true)
             {
+                if (!soundHasPlayed)
+    {
+        Greenfoot.playSound("applause.wav");
+        soundHasPlayed = true;  //This will cause this if block never to run again, unless you have code somewhere that turns it to false again.
+    }
                 notifyObserver(points);
             getWorld().addObject(new ExplanationText("Correct Answer",this.card),245,205);
              getWorld().addObject(new Score("Score: "),230,446);
             }
             else
             {
+                 if (!soundHasPlayed)
+                 {
+                    Greenfoot.playSound("wrong.mp3");
+                    soundHasPlayed = true;  //This will cause this if block never to run again, unless you have code somewhere that turns it to false again.
+                 }
                 int a=0-points;
                 notifyObserver(a);
                 getWorld().addObject(new ExplanationText("Incorrect Answer",this.card),245,205);
