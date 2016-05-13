@@ -92,7 +92,8 @@ public class MainTopicComposite extends Actor implements ICardComponent
             ((MyWorld)getWorld()).setQuestions(questions);
             createAllQCards(this.getName());
             addAllQCardsToWorld();
-            getWorld().addObject(new Score("Score: "),230,446);
+            getWorld().addObject(new Score("Score1: "),230,446);
+            getWorld().addObject(new Score("Score2: "),330,446);
         }catch(IOException ioe){
             }
         }

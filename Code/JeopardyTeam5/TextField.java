@@ -51,6 +51,7 @@ public class TextField extends Actor implements Subject
     boolean soundHasPlayed=false;
     public void act()
     {
+        
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if(mouse == null){
             return;
@@ -68,6 +69,7 @@ public class TextField extends Actor implements Subject
         
         
         if(Greenfoot.mouseClicked(this)){
+    
             ((MyWorld)getWorld()).answerClicked=true;
             ((MyWorld)getWorld()).stopTimer();
             if(this.card instanceof QuestionCardLeaf273){
@@ -90,7 +92,8 @@ public class TextField extends Actor implements Subject
     }
                 notifyObserver(points);
             getWorld().addObject(new ExplanationText("Correct Answer",this.card),245,205);
-             getWorld().addObject(new Score("Score: "),230,446);
+             getWorld().addObject(new Score("Score1: "),230,446);
+             getWorld().addObject(new Score("Score2: "),330,446);
             }
             else
             {
@@ -102,7 +105,8 @@ public class TextField extends Actor implements Subject
                 int a=0-points;
                 notifyObserver(a);
                 getWorld().addObject(new ExplanationText("Incorrect Answer",this.card),245,205);
-                getWorld().addObject(new Score("Score: "),230,446);
+                getWorld().addObject(new Score("Score1: "),230,446);
+                getWorld().addObject(new Score("Score2: "),330,446);
             }
             getWorld().removeObjects(getWorld().getObjects(QuestionScreen.class));
             getWorld().removeObjects(getWorld().getObjects(Question.class));

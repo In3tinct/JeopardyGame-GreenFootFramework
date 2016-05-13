@@ -20,7 +20,9 @@ public class MyWorld extends World
     ICardComponent currentCard;
     boolean answerClicked=false;
     ChallengeQuestion[] questions;
-    int finalScore=0;
+    int score1=0;
+    int score2=0;
+    private int player=1;
     
     public void setCurrentCard(ICardComponent card){
        this.currentCard = card;
@@ -85,12 +87,28 @@ public class MyWorld extends World
         questions=ques;
     }
     
-    public void setScore(int score) {
-        finalScore=score;
+    public void setScore1(int score) {
+        score1=score;
     }
     
-    public int getScore() {
-        return finalScore;
+    public int getScore1() {
+        return score1;
+    }
+    
+    public void setScore2(int score) {
+        score2=score;
+    }
+    
+    public int getScore2() {
+        return score2;
+    }
+    
+    public void setPlayer(int playerTurn) {
+        player=playerTurn;
+    }
+    
+    public int getPlayer() {
+        return player;
     }
 
     /**
