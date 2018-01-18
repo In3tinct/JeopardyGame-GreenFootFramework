@@ -1,4 +1,5 @@
 # 202Project
-Jeoparty game for 202 project
-Added by Tushara
-Added by Chandana
+A multi player Jeopardy game based on Greenfoot framework, can be loaded with different questions and categories. 
+
+Language used: Java
+References: https://www.greenfoot.org/
